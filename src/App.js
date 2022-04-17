@@ -2,12 +2,13 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Nav from './component/nav/Nav'
 import Home from './view/home/Home'
+import TodoTestView from './view/testView/TodoTestView'
  
 const RouterPage = () => {
   return (
     <Routes>
       <Route exact path="/" element={<Home/>} />
-      {/* <Route exact path="work" element={<Work/>} /> */}
+      <Route exact path="test" element={<TodoTestView/>} />
       <Route path="*" element={<Home/>} />
     </Routes>
   )

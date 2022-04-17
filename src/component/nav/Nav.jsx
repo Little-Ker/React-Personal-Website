@@ -25,6 +25,9 @@ const NavList = () => {
     {
       title: 'Goal', to:'123'
     },
+    {
+      title: 'TodoTest', to:'test'
+    },
   ]
 
   return (
