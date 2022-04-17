@@ -1,3 +1,4 @@
+import { Link, useLocation  } from "react-router-dom";
 import PropTypes from 'prop-types'
 import styles from './nav.module.sass'
 
@@ -13,16 +14,16 @@ const Avatar = (prop) => {
 const NavList = () => {
   const linkList = [
     {
-      title: 'About', link:'123'
+      title: 'About', to:'123'
     },
     {
-      title: 'Travel', link:'123'
+      title: 'Travel', to:'123'
     },
     {
-      title: 'Work', link:'123'
+      title: 'Work', to:'123'
     },
     {
-      title: 'Goal', link:'123'
+      title: 'Goal', to:'123'
     },
   ]
 
@@ -30,9 +31,7 @@ const NavList = () => {
     <div className={styles.list}>
       <ul>
           {linkList.map((link, index) => (
-            <li className={styles.link} key={index}>
-              {link.title}
-            </li>
+            <Link key={index} className={styles.link} to={link.to} >{link.title}</Link>
           ))}
       </ul>
     </div>
