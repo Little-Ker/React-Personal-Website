@@ -6,7 +6,6 @@ const TodoTestList = () => {
     const dispatch = useDispatch()
     const titleDate = useSelector(selectAllPosts)
     const postStatus = useSelector(state => state.todoTest.status) // <-- 拿取資料
-    console.log('titleDate',titleDate)
 
     useEffect(() => {
         if (postStatus === 'idle') {
@@ -14,17 +13,13 @@ const TodoTestList = () => {
         }
     }, [postStatus, dispatch])
 
-    if (titleDate.length == 0) {
-        return null;
-    } else {
-        return (
-            <ul>
-            {titleDate.titleData.map((val, index) => (
+    return (
+        <ul>
+            {titleDate.map((val, index) => (
                 <li key={index}>{val.title}</li>
             ))}
-            </ul>
-        );
-    }
+        </ul>
+    );
 };
  
 export default TodoTestList;

@@ -5,7 +5,7 @@ export const fetchTitleData  = createAsyncThunk(
     'axios/fetchTitleData',
     async () => {
       const response = await axios.get('/data/dataList.json')
-      return response.data
+      return response.data.titleData
     }
 )
 
