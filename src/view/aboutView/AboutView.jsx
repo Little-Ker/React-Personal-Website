@@ -3,6 +3,7 @@ import '../../style/main.sass'
 
 import Me from '../../component/about/me/Me'
 import TimelineTest from '../../component/timelineTest/TimelineTest'
+import SwiperTest from '../../component/swiperTest/SwiperTest'
 // import Live from '../../component/about/live/Live'
 
 function BgCircle() {
@@ -23,6 +24,7 @@ function aboutView() {
             <div className='container1280' >
                 <Me />
                 <TimelineTest />
+                <SwiperTest />
                 {/* <Live /> */}
             </div>
         </div>
