@@ -1,0 +1,15 @@
+@use '../../style/variable' as variable
+@use '../../style/main' as main
+
+.bg
+    background-color: variable.$main-bg
+    overflow: hidden
+    position: relative
+    width: calc(100% - 80px)
+    margin-left: 80px
+    .circleY
+        +main.bg-circle(variable.$yellow-bg, 350px, -30px, 30px)
+    .circleP
+        +main.bg-circle(variable.$pink-bg, 1000px, 62%, -25%)
+    .circleO
+        +main.bg-circle(variable.$orange-bg, 800px, 10%, 25%)
