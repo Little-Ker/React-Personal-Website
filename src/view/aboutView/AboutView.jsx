@@ -2,6 +2,7 @@ import styles from './aboutView.module.sass'
 import '../../style/main.sass'
 
 import Me from '../../component/about/me/Me'
+import TimelineTest from '../../component/timelineTest/TimelineTest'
 // import Live from '../../component/about/live/Live'
 
 function BgCircle() {
@@ -21,6 +22,7 @@ function aboutView() {
             <BgCircle />
             <div className='container1280' >
                 <Me />
+                <TimelineTest />
                 {/* <Live /> */}
             </div>
         </div>
