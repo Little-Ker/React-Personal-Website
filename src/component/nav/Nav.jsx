@@ -1,6 +1,7 @@
 import { Link, useLocation  } from "react-router-dom";
 import PropTypes from 'prop-types'
 import styles from './nav.module.sass'
+import clsx from 'clsx'
 
 const Avatar = (prop) => {
   return (
@@ -13,28 +14,23 @@ const Avatar = (prop) => {
 
 const NavList = () => {
   const linkList = [
-    {
-      title: 'About', to:'123'
-    },
-    {
-      title: 'Travel', to:'123'
-    },
-    {
-      title: 'Work', to:'123'
-    },
-    {
-      title: 'Goal', to:'123'
-    },
-    {
-      title: 'TodoTest', to:'test'
-    },
+    { title: 'About', to:'about' },
+    { title: 'Travel', to:'travel' },
+    { title: 'Work', to:'work' },
+    { title: 'Goal', to:'goal' },
+    { title: 'TodoTest', to:'test' },
   ]
+
+  const location = useLocation()
 
   return (
     <div className={styles.list}>
       <ul>
           {linkList.map((link, index) => (
-            <Link key={index} className={styles.link} to={link.to} >{link.title}</Link>
+            <Link key={index}
+             className={clsx(styles.link,location.pathname === `/${link.to}` && styles.active)}
+             to={link.to}
+            >{link.title}</Link>
           ))}
       </ul>
     </div>
