@@ -2,9 +2,7 @@ import styles from './aboutView.module.sass'
 import '../../style/main.sass'
 
 import Me from '../../component/about/me/Me'
-import TimelineTest from '../../component/timelineTest/TimelineTest'
-import SwiperTest from '../../component/swiperTest/SwiperTest'
-// import Live from '../../component/about/live/Live'
+import Introduce from '../../component/about/introduce/Introduce'
 
 function BgCircle() {
     return (
@@ -16,16 +14,13 @@ function BgCircle() {
     )
 }
 
-
 function aboutView() {
     return (
         <div className={styles.bg}>
             <BgCircle />
             <div className='container1280' >
                 <Me />
-                <TimelineTest />
-                <SwiperTest />
-                {/* <Live /> */}
+                <Introduce />
             </div>
         </div>
     )

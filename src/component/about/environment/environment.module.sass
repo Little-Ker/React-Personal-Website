@@ -1,0 +1,37 @@
+@use '../../../style/variable' as variable
+    
+.environment
+    margin: 50px
+    .photoSwiper
+        display: flex
+        width: 100%
+        .swiper
+            width: 75%
+            height: 400px
+            margin: 0 50px 0 0
+            background-color: #ccc
+            position: relative
+            .envPhoto
+                width: 100%
+                height: 100%
+        .btnList
+            position: relative
+            width: 25%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            .btn
+                align-self: center
+                margin: 15px 0
+                border: 1px solid variable.$brown-color
+                color: variable.$brown-color
+                font-weight: 700
+                letter-spacing: 1px
+                font-size: 16px
+                width: 140px
+                height: 45px
+                border-radius: 0
+                box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px
+            .active
+                background-color: variable.$brown-color
+                color: #fff
