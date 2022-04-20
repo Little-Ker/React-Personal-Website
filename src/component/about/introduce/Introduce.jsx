@@ -3,6 +3,7 @@ import styles from './introduce.module.sass'
 import clsx from 'clsx'
 
 import Environment from '../environment/Environment'
+import Interest from '../interest/Interest'
 
 function Introduce() {
     const [selected, setSelected] = useState(0)
@@ -15,7 +16,7 @@ function Introduce() {
             content: <Environment />
         },
         { title: '興趣',
-            content: <Environment />
+            content: <Interest />
         },
     ]
 
