@@ -27,7 +27,7 @@ function Me() {
   }
 
   return (
-      <div className={styles.bg}>
+      <div className={styles.meBg}>
         <Introduce title={introduceTxt.title} content={introduceTxt.content} />
       </div>
   );

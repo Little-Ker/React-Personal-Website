@@ -3,6 +3,7 @@ import './App.css'
 import Nav from './component/nav/Nav'
 import Home from './view/home/Home'
 import AboutView from './view/aboutView/AboutView'
+import TravelView from './view/travelView/TravelView'
 import TodoTestView from './view/testView/TodoTestView'
  
 const RouterPage = () => {
@@ -10,6 +11,7 @@ const RouterPage = () => {
     <Routes>
       <Route exact path="/" element={<Home/>} />
       <Route exact path="about" element={<AboutView/>} />
+      <Route exact path="travel" element={<TravelView/>} />
       <Route exact path="test" element={<TodoTestView/>} />
       <Route path="*" element={<Home/>} />
     </Routes>
