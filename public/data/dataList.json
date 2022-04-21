@@ -1,7 +1,15 @@
 {
-    "titleData": [
-      {"title": "興趣", "content": "11"},
-      {"title": "休閒運動", "content": "22"},
-      {"title": "出生地", "content": "33"}
+  "titleData": [
+    {"title": "興趣", "content": "11"},
+    {"title": "休閒運動", "content": "22"},
+    {"title": "出生地", "content": "33"}
+  ],
+  "travelData": {
+    "banner": [
+      {"title": "亞洲大學", "to": "/travel/asia", "imgUrl": "/img/travel/banner01.jpg", "startDate": "2015 - 09", "overDate": "2019 - 06"},
+      {"title": "西安研學之旅", "to": "/travel/asia", "imgUrl": "/img/travel/banner02.jpg", "startDate": "2022 - 04 - 21", "overDate": "2022 - 04 - 21"},
+      {"title": "寧夏研學之旅", "to": "/travel/asia", "imgUrl": "/img/travel/banner03.jpg", "startDate": "2022 - 04 - 21", "overDate": "2022 - 04 - 21"},
+      {"title": "張家界", "to": "/travel/asia", "imgUrl": "/img/travel/banner04.jpg", "startDate": "2022 - 04 - 21", "overDate": "2022 - 04 - 21"}
     ]
+  }
 }
