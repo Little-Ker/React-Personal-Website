@@ -13,14 +13,30 @@ export const travelSlice = createSlice({
     name: "travel",
     initialState: {
         travelBannerData: [],
+        travelAsiaData: [],
+        asiaCount: 0,
     },
-    reducers: {},
+    reducers: {
+        initAsiaCount: (state) => {
+            state.asiaCount = 0
+        },
+        addAsiaCount: (state) => {
+            const totalItem = 3
+            if (state.asiaCount >= totalItem) {
+                state.asiaCount = 0
+                return
+            }
+            state.asiaCount += 1
+        }
+    },
     extraReducers: (builder) => {
         builder.addCase(
             fetchTravelData.fulfilled, (state, action) => {
                 state.travelBannerData = action.payload.banner
+                state.travelAsiaData = action.payload.asia
         })
     }
 });
 
+export const { addAsiaCount, initAsiaCount } = travelSlice.actions
 export default travelSlice.reducer

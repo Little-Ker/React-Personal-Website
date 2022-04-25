@@ -1,0 +1,124 @@
+@use '../../style/variable' as variable
+@use '../../style/main' as main
+    
+.asiaBg
+    width: 100%
+    height: 100vh
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
+    overflow: hidden
+    position: relative
+    .colorBg
+        +main.bg-fit
+        position: absolute
+        left: 0
+        width: 45%
+        height: 100%
+        background: linear-gradient(#FCCAC8 70%, #9DD1D2 100%)
+        &.colorBg1
+            transition: 1s all
+            background: linear-gradient(#c5f4fd 50%, #89b2ff 100%)
+        &.colorBg2
+            transition: 1s all
+            background: linear-gradient(#D9C6AA 50%, #404A4D 100%)
+        &.colorBg3
+            transition: 1s all
+            background: linear-gradient(#c6e0cc 50%, #1b2711 100%)  
+    .title
+        position: absolute
+        z-index: 2
+        top: 12%
+        left: 8%
+        font-size: 180px
+        color: #ffffff
+        text-shadow: #E7BDBF 0px 4px 16px, #E7BDBF 0px 8px 32px
+        &.titleColor01
+            text-shadow: #abd3db 0px 4px 16px, #acd5dd 0px 8px 32px
+        &.titleColor02
+            text-shadow: #8a847a 0px 4px 16px, #8f897f 0px 8px 32px
+        &.titleColor03
+            text-shadow: #6d7c81 0px 4px 16px, #647377 0px 8px 32px
+    .txt
+        position: absolute
+        height: 216px
+        left: 18%
+        bottom: 10%
+        color: #fff
+        text-shadow: #000 0px 4px 16px, #000 0px 8px 32px
+        text-align: left
+        letter-spacing: 1px
+        line-height: 2
+    .banner
+        z-index: 1
+        +main.bg-fit
+        width: 70%
+        height: 90%
+    .photoSwiper
+        width: 100%
+        height: 100%
+        position: relative
+        .nextBtn
+            position: absolute
+            cursor: pointer
+            bottom: 0
+            right: 0
+            z-index: 1
+            width: 250px
+            height: 140px
+            display: flex
+            flex-direction: row-reverse
+            box-shadow: 0px 0px 10px 10px rgb(0 0 0 / 35%)
+            overflow: hidden
+            .btnImg
+                transition: .3s all
+                opacity: 0
+                position: absolute
+                width: 100%
+            .showBtn
+                opacity: 1
+            img
+                transition: .3s all
+            .nextIcon
+                transition: .3s all
+                width: 20%
+                height: 100%
+                background-color: variable.$brown-color
+                opacity: .8
+                color: #fff
+                position: relative
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+                +variable.set-flex(center, center)
+                &::after, &::before
+                    content: ''
+                    position: absolute
+                    height: 50%
+                    width: 20px
+                    height: 5px
+                    border-radius: 10px
+                    background-color: #fff
+                    transform: rotate(45deg)
+                    top: calc((100% - 11px) / 2)
+                &::before
+                    transform: rotate(-45deg)
+                    top: calc((100% + 11px) / 2)
+            &:hover
+                .nextIcon
+                    opacity: 1 
+                img
+                    transform: scale(1.05)
+    .swiperBg
+        width: 100%
+        height: 100%
+        .swiperSlide
+            border-radius: 30px 0 0 0
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+    .swiperTxt
+        width: 560px
+        height: 320px
+        position: absolute
+        left: -40%
+        bottom: 0%
+        font-size: 28px
