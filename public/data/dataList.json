@@ -10,6 +10,28 @@
       {"title": "西安研學之旅", "to": "/travel/asia", "imgUrl": "/img/travel/banner02.jpg", "startDate": "2022 - 04 - 21", "overDate": "2022 - 04 - 21"},
       {"title": "寧夏研學之旅", "to": "/travel/asia", "imgUrl": "/img/travel/banner03.jpg", "startDate": "2022 - 04 - 21", "overDate": "2022 - 04 - 21"},
       {"title": "張家界", "to": "/travel/asia", "imgUrl": "/img/travel/banner04.jpg", "startDate": "2022 - 04 - 21", "overDate": "2022 - 04 - 21"}
+    ],
+    "asia": [
+      {
+        "imgUrl": "/img/travel/asia/a0.jpg",
+        "txt": [ "台中市霧峰區", "全台最美大學", "希臘羅馬式風格建築" ],
+        "nextImgUrl": "/img/travel/asia/a1.jpg"
+      },
+      {
+        "imgUrl": "/img/travel/asia/a1.jpg",
+        "txt": [ "行政大樓暨圖書館", "圓頂建築", "亞大地標" ],
+        "nextImgUrl": "/img/travel/asia/a2.jpg"
+      },
+      {
+        "imgUrl": "/img/travel/asia/a2.jpg",
+        "txt": [ "羅馬體育館", "拱門柱式建築結構", "拍婚紗首選" ],
+        "nextImgUrl": "/img/travel/asia/a3.jpg"
+      },
+      {
+        "imgUrl": "/img/travel/asia/a3.jpg",
+        "txt": [ "亞大都市傳說", "分手椅" ],
+        "nextImgUrl": "/img/travel/asia/a0.jpg"
+      }
     ]
   }
 }
