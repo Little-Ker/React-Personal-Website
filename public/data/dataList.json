@@ -8,7 +8,7 @@
     "banner": [
       {"title": "亞洲大學", "to": "/travel/asia", "imgUrl": "/img/travel/banner01.jpg", "startDate": "2015 - 09", "overDate": "2019 - 06"},
       {"title": "西安研學之旅", "to": "/travel/asia", "imgUrl": "/img/travel/banner02.jpg", "startDate": "2022 - 04 - 21", "overDate": "2022 - 04 - 21"},
-      {"title": "寧夏研學之旅", "to": "/travel/asia", "imgUrl": "/img/travel/banner03.jpg", "startDate": "2022 - 04 - 21", "overDate": "2022 - 04 - 21"},
+      {"title": "寧夏研學之旅", "to": "/travel/ningxia", "imgUrl": "/img/travel/banner03.jpg", "startDate": "2019 - 05 - 11", "overDate": "2019 - 05 - 18"},
       {"title": "張家界", "to": "/travel/asia", "imgUrl": "/img/travel/banner04.jpg", "startDate": "2022 - 04 - 21", "overDate": "2022 - 04 - 21"}
     ],
     "asia": [
@@ -32,6 +32,47 @@
         "txt": [ "亞大都市傳說", "分手椅" ],
         "nextImgUrl": "/img/travel/asia/a0.jpg"
       }
-    ]
+    ],
+    "ningxia": {
+      "introduce": {
+        "title": "寧夏文化",
+        "banner": "/img/travel/banner03.jpg",
+        "imgUrl":  "/img/travel/ningxia/n0.jpg",
+        "content": "一般說起我對寧夏的印象，大概就是回族、大漠以及駱駝吧，果不其然導遊也有說到：有些觀光客會問他們，是不是還是騎駱駝去上學？但在下了飛機、上了遊覽車，前往飯店的路上，這個錯誤的第一印象立刻被推翻掉，寧夏其實是個很現代化的城市。"
+      },
+      "camel": [{
+        "title": "鎮北堡西部影城",
+        "imgUrl": "/img/travel/ningxia/n1_1.jpg"
+      },{
+        "title": "拋綉球招親",
+        "imgUrl": "/img/travel/ningxia/n1_2.jpg"
+      }],
+      "movie": {
+        "title01": "沙湖騎駱駝體驗",
+        "imgUrl01": "/img/travel/ningxia/n2_1.jpg",
+        "title02": "",
+        "imgUrl02": "/img/travel/ningxia/n2_2.jpg",
+        "title03": "",
+        "imgUrl03": "/img/travel/ningxia/n2_3.jpg"
+      },
+      "yellowRiver": {
+        "title01": "黃河壇",
+        "imgUrl01": "/img/travel/ningxia/n3_1.jpg",
+        "title02": "黃河樓",
+        "imgUrl02": "/img/travel/ningxia/n3_2.jpg",
+        "title03": "黃河宮",
+        "imgUrl03": "/img/travel/ningxia/n3_3.jpg"
+      },
+      "mountain": [{
+        "title": "須彌山石窟",
+        "imgUrl": "/img/travel/ningxia/n4_1.jpg"
+      },{
+        "title": "古絲綢之路",
+        "imgUrl": "/img/travel/ningxia/n4_2.jpg"
+      },{
+        "title": "百年大佛",
+        "imgUrl": "/img/travel/ningxia/n4_3.jpg"
+      }]
+    }
   }
 }
