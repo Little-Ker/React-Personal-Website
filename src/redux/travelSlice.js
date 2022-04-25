@@ -15,6 +15,7 @@ export const travelSlice = createSlice({
         travelBannerData: [],
         travelAsiaData: [],
         asiaCount: 0,
+        travelNingxiaData: [],
     },
     reducers: {
         initAsiaCount: (state) => {
@@ -34,6 +35,7 @@ export const travelSlice = createSlice({
             fetchTravelData.fulfilled, (state, action) => {
                 state.travelBannerData = action.payload.banner
                 state.travelAsiaData = action.payload.asia
+                state.travelNingxiaData = action.payload.ningxia
         })
     }
 });
