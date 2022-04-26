@@ -7,7 +7,7 @@
   "travelData": {
     "banner": [
       {"title": "亞洲大學", "to": "/travel/asia", "imgUrl": "/img/travel/banner01.jpg", "startDate": "2015 - 09", "overDate": "2019 - 06"},
-      {"title": "西安研學之旅", "to": "/travel/asia", "imgUrl": "/img/travel/banner02.jpg", "startDate": "2022 - 04 - 21", "overDate": "2022 - 04 - 21"},
+      {"title": "西安研學之旅", "to": "/travel/sian", "imgUrl": "/img/travel/banner02.jpg", "startDate": "2022 - 04 - 21", "overDate": "2022 - 04 - 21"},
       {"title": "寧夏研學之旅", "to": "/travel/ningxia", "imgUrl": "/img/travel/banner03.jpg", "startDate": "2019 - 05 - 11", "overDate": "2019 - 05 - 18"},
       {"title": "張家界", "to": "/travel/asia", "imgUrl": "/img/travel/banner04.jpg", "startDate": "2022 - 04 - 21", "overDate": "2022 - 04 - 21"}
     ],
@@ -72,6 +72,51 @@
       },{
         "title": "百年大佛",
         "imgUrl": "/img/travel/ningxia/n4_3.jpg"
+      }]
+    },
+    "sian": {
+      "introduce": {
+        "title": "西安",
+        "bg01": "/img/travel/sian/bg01.jpg",
+        "bg02": "/img/travel/sian/bg02.jpg",
+        "bg03": "/img/travel/sian/bg03.jpg"
+      },
+      "terracottaArm": {
+        "title": "秦始皇陵",
+        "txt": "西安市為中國陝西的省會。西安，古稱長安，是中國歷史上建都時間最長的都城，有十三朝建都於此，與雅典、羅馬、開羅並稱為世界四大古都。",
+        "imgList": [
+          "/img/travel/sian/s1_1.jpg",
+          "/img/travel/sian/s1_2.jpg"
+        ]
+      },
+      "hotSpring": {
+        "title": "華清池 長恨歌",
+        "txt": "西安市為中國陝西的省會。西安，古稱長安，是中國歷史上建都時間最長的都城，有十三朝建都於此，與雅典、羅馬、開羅並稱為世界四大古都。",
+        "imgList": [
+          "/img/travel/sian/s2_1.jpg",
+          "/img/travel/sian/s2_2.jpg",
+          "/img/travel/sian/s2_3.jpg"
+        ]
+      },
+      "park": [{
+        "title": "漢城湖遺址公園",
+        "imgUrl": "/img/travel/sian/s3_1.jpg"
+      },{
+        "title": "漢服體驗",
+        "imgUrl": "/img/travel/sian/s3_2.jpg"
+      }],
+      "eat": [{
+        "title": "肉夾饃、羊肉泡饃",
+        "imgUrl": "/img/travel/sian/s4_1_1.jpg",
+        "imgUrlHover": "/img/travel/sian/s4_1_2.jpg"
+      },{
+        "title": "ㄅㄧㄤˋㄅㄧㄤˋ麵",
+        "imgUrl": "/img/travel/sian/s4_2_1.jpg",
+        "imgUrlHover": "/img/travel/sian/s4_2_2.jpg"
+      },{
+        "title": "新疆紅柳烤肉",
+        "imgUrl": "/img/travel/sian/s4_3_1.jpg",
+        "imgUrlHover": "/img/travel/sian/s4_3_2.jpg"
       }]
     }
   }
