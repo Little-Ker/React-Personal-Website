@@ -13,9 +13,9 @@ import ChooseBanner from "../../component/travel/chooseBanner/ChooseBanner"
 function Title() {
     return (
         <div className={styles.title}>
-            <p className={styles.txt01}>海旅會研學之旅</p>
-            <p className={styles.txt02}>西</p>
-            <p className={styles.txt03}>安</p>
+            <p data-aos="fade-down" className={styles.txt01}>海旅會研學之旅</p>
+            <p data-aos="zoom-out-left" data-aos-delay="200" className={styles.txt02}>西</p>
+            <p data-aos="zoom-out-right" data-aos-delay="400" className={styles.txt03}>安</p>
         </div>
     )
 }
@@ -23,11 +23,11 @@ function Title() {
 function LeftPoint(props) {
     return (
         <div className={`${styles.point}`}>
-            <div className={styles.bannerPos}>
+            <div data-aos-anchor-placement="top-center" data-aos="fade-right" className={styles.bannerPos}>
                 <ChooseBanner setBannerId='banner01' pointList={props.data.imgList} btnPosRight={true}  />
             </div>
-            <div className={styles.txt}>
-                <h1>{props.data.title}</h1>
+            <div data-aos="fade-left" data-aos-anchor-placement="top-center" className={styles.txt}>
+                <h1 data-aos="flip-left" data-aos-delay="600" data-aos-easing="ease-out-cubic" data-aos-anchor-placement="top-center">{props.data.title}</h1>
                 <p>{props.data.txt}</p>
             </div>
         </div>
@@ -37,11 +37,11 @@ function LeftPoint(props) {
 function RightPoint(props) {
     return (
         <div className={`${styles.point} ${styles.rightPoint}`}>
-            <div className={`${styles.txt} ${styles.rightTxt}`}>
-                <h1>{props.data.title}</h1>
+            <div data-aos-anchor-placement="top-center" data-aos="fade-right"  className={`${styles.txt} ${styles.rightTxt}`}>
+                <h1 data-aos="flip-right" data-aos-delay="1000" data-aos-anchor-placement="top-bottom">{props.data.title}</h1>
                 <p>{props.data.txt}</p> 
             </div>
-            <div className={`${styles.bannerPos} ${styles.bannerRightPos}`}>
+            <div data-aos="fade-left" data-aos-anchor-placement="top-center" className={`${styles.bannerPos} ${styles.bannerRightPos}`}>
                 <ChooseBanner setBannerId='banner02' pointList={props.data.imgList} btnPosRight={false} className={styles.bannerPos} />
             </div>
         </div>
@@ -53,9 +53,9 @@ function PointList(props) {
         <div style={{backgroundImage: `url(${props.bg})`}} className="bg-fit">
             <div className={`container960 ${styles.pointList}`}>
                 {props.data.map((item ,index) => (
-                    <div key={index} className={styles.item}>
+                    <div data-aos="zoom-in-left" data-aos-delay={index * 300} key={index} className={styles.item}>
                         <ImgRotate item={item} />
-                        <p className={styles.imgTxt}>{item.title}</p>
+                        <p data-aos="flip-right" data-aos-duration="800" data-aos-delay={index * 300 + 800} className={styles.imgTxt}>{item.title}</p>
                     </div>
                 ))}
             </div>
@@ -64,12 +64,17 @@ function PointList(props) {
 }
 
 function BlackPoint(props) {
+    function fadePos(index) {
+        if(index % 2 === 1) return "fade-left"
+        return "fade-right"
+    }
+
     return (
         <div className={styles.blackPoint}>
             {props.data.map((item, index) => (
-                <div key={index} style={{backgroundImage: `url(${item.imgUrl})`}} className={`bg-fit ${styles.item}`}>
+                <div data-aos={fadePos(index)} key={index} style={{backgroundImage: `url(${item.imgUrl})`}} className={`bg-fit ${styles.item}`}>
                     <div className={styles.blackHide}>
-                        <p>{item.title}</p>
+                        <p data-aos="flip-left" data-aos-delay="600">{item.title}</p>
                     </div>
                 </div>
             ))}
