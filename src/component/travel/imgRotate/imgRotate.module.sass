@@ -1,0 +1,31 @@
+@use '../../../style/main' as main
+    
+.flip
+    transition: transform .6s ease-in-out
+    transform-style: preserve-3d
+    position: relative
+    width: 220px
+    height: 220px
+    &:hover
+        transform: rotateY(180deg)
+    .imgCircle
+        +main.bg-fit()
+        width: 100%
+        height: 100%
+        border-radius: 50%
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+        left: 0
+        top: 0
+        position: absolute
+        backface-visibility: hidden
+        &::before
+            content: ''
+            width: 95%
+            height: 95%
+            position: absolute
+            left: 5px
+            top: 5px
+            border: 2px solid #5c5e6b
+            border-radius: 50%
+    .back
+        transform: rotateY(180deg)

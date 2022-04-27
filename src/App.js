@@ -6,6 +6,7 @@ import AboutView from './view/aboutView/AboutView'
 import TravelView from './view/travelView/TravelView'
 import Asia from './view/travelView/Asia'
 import Ningxia from './view/travelView/Ningxia'
+import Sian from './view/travelView/Sian'
 import TodoTestView from './view/testView/TodoTestView'
  
 const RouterPage = () => {
@@ -15,6 +16,7 @@ const RouterPage = () => {
       <Route exact path="about" element={<AboutView/>} />
       <Route exact path="travel" element={<TravelView/>} />
       <Route exact path="travel/asia" element={<Asia/>} />
+      <Route exact path="travel/sian" element={<Sian/>} />
       <Route exact path="travel/ningxia" element={<Ningxia/>} />
       <Route exact path="test" element={<TodoTestView/>} />
       <Route path="*" element={<Home/>} />

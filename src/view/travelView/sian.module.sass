@@ -1,0 +1,97 @@
+@use '../../style/variable' as variable
+@use '../../style/main' as main
+    
+.sian
+    width: calc(100% - 80px)
+    margin-left: 80px
+    font-family: "Poppins", sans-serif
+    overflow: hidden
+    .content
+        width: calc(100% - 360px)
+        +main.bg-fit()
+        .title
+            font-size: 42px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            position: relative
+            font-family: 'f01'
+            padding-bottom: 80px
+            .txt01
+                margin: 80px 0
+            .txt02, .txt03
+                font-size: 64px
+    .point
+        margin-top: 180px
+        display: flex
+        .txt
+            align-self: center
+            width: 60%
+            padding-right: calc((100% - 1280px) / 2)
+            line-height: 2
+            font-size: 18px
+            &.rightTxt
+                padding-right: 0
+                padding-left: calc((100% - 1280px) / 2)
+            h1
+                font-size: 26px
+                margin-bottom: 5px
+                color: #aa885e
+        .bannerPos
+            height: 400px
+            width: 100%
+            margin-right: 60px
+        .bannerRightPos
+            margin-left: 60px
+            margin-right: 0
+    .pointList
+        +variable.set-flex(space-between, center)
+        padding: 100px 0
+        .item
+            position: relative
+            .imgTxt
+                font-size: 18px
+                letter-spacing: 1px
+                margin-top: 30px
+                position: relative
+                z-index: 2
+                text-shadow: rgb(255, 255, 255) -10px 5px 15px
+                &::after, &::before
+                    content: ''
+                    width: 100%
+                    height: 50px
+                    border: 1px solid #5c5e6b
+                    position: absolute
+                    left: 0
+                    top: -15px
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+                &::before
+                    left: 5px
+                    top: -10px
+    .blackPoint
+        margin-top: 160px
+        height: 370px
+        background-color: #ccc
+        display: flex
+        .item
+            width: 50%
+            .blackHide
+                width: 100%
+                height: 100%
+                background-color: #6f6f7e9f
+                color: #fff
+                font-weight: 700
+                font-size: 20px
+                letter-spacing: 2px
+                +variable.set-flex(center, center)
+                transition: .3s all
+            &:hover
+                .blackHide
+                    opacity: 0
+    .footer
+        +variable.set-flex(flex-end, center)
+        background-color: #505057
+        padding: 10px 30px
+        color: #ccc
+        font-size: 14px
+        letter-spacing: 1px
