@@ -17,6 +17,7 @@ export const travelSlice = createSlice({
         asiaCount: 0,
         travelNingxiaData: [],
         travelSianData: [],
+        travelZhangjiajie: [],
     },
     reducers: {
         initAsiaCount: (state) => {
@@ -38,6 +39,7 @@ export const travelSlice = createSlice({
                 state.travelAsiaData = action.payload.asia
                 state.travelNingxiaData = action.payload.ningxia
                 state.travelSianData = action.payload.sian
+                state.travelZhangjiajie = action.payload.zhangjiajie
         })
     }
 });

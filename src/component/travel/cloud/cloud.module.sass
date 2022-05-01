@@ -1,0 +1,32 @@
+.cloud
+    position: relative
+    top: 0
+    width: 100%
+    img
+        position: absolute
+        height: 900px
+        top: -600px
+    &.cloudAnim01
+        animation: cloudMove01 200s
+        animation-timing-function: unset
+        animation-fill-mode: forwards
+        animation-direction: alternate
+        animation-iteration-count: infinite
+    &.cloudAnim02
+        animation: cloudMove02 200s
+        animation-timing-function: unset
+        animation-fill-mode: forwards
+        animation-direction: alternate
+        animation-iteration-count: infinite
+
+@keyframes cloudMove01 
+  0%
+    left: -80%
+  100%
+    left: 20%
+
+@keyframes cloudMove02
+  0%
+    left: -20%
+  100%
+    left: 20%
