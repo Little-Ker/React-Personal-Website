@@ -118,6 +118,41 @@
         "imgUrl": "/img/travel/sian/s4_3_1.jpg",
         "imgUrlHover": "/img/travel/sian/s4_3_2.jpg"
       }]
+    },
+    "zhangjiajie": {
+      "introduce": {
+        "title": "張家界"
+      },
+      "photo": [{
+        "title": "袁家界",
+        "imgUrl": "/img/travel/zhangjiajie/photo01.jpg",
+        "txt": "0333張家界市，舊稱大庸，是中華人民共和國湖南省下轄的地級市。"
+      },{
+        "title": "鳳凰古城",
+        "imgUrl": "/img/travel/zhangjiajie/photo02.jpg",
+        "txt": "0222張家界市，舊稱大庸，是中華人民共和國湖南省下轄的地級市。"
+      },{
+        "title": "張家界",
+        "imgUrl": "/img/travel/zhangjiajie/photo01.jpg",
+        "txt": "0111張家界市，舊稱大庸，是中華人民共和國湖南省下轄的地級市。"
+      }],
+      "circleImg": [{
+        "title": "百龍天梯",
+        "imgUrl": "/img/travel/zhangjiajie/circleImg01.png"
+      },{
+        "title": "百龍天梯",
+        "imgUrl": "/img/travel/zhangjiajie/circleImg02.png"
+      },{
+        "title": "天門洞",
+        "imgUrl": "/img/travel/zhangjiajie/circleImg03.png"
+      }],
+      "blackImg": [{
+        "title": "張家界01",
+        "imgUrl": "/img/travel/zhangjiajie/photo01.jpg"
+      },{
+        "title": "張家界02",
+        "imgUrl": "/img/travel/zhangjiajie/photo02.jpg"
+      }]
     }
   }
 }
