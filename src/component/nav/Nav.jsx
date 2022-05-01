@@ -21,14 +21,14 @@ const NavList = () => {
     { title: 'TodoTest', to:'test' },
   ]
 
-  const location = useLocation()
+  const location = useLocation().pathname.split('/')
 
   return (
     <div className={styles.list}>
       <ul>
           {linkList.map((link, index) => (
             <Link key={index}
-             className={clsx(styles.link,location.pathname === `/${link.to}` && styles.active)}
+             className={clsx(styles.link,location[1] === link.to && styles.active)}
              to={link.to}
             >{link.title}</Link>
           ))}
