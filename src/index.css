@@ -18,5 +18,10 @@ code {
 
 @font-face {
   font-family: 'f01';
-  src: url('/public/font/wt024.ttf');
+  src: url('/src/assets/font/wt024.ttf');
+}
+
+@font-face {
+  font-family: 'f02';
+  src: url('/src/assets/font/KouzanBrushFontSousyo.ttf');
 }
