@@ -1,0 +1,32 @@
+@use '../../../style/variable' as variable
+@use '../../../style/main' as main
+    
+.typeNav
+    width: 300px
+    height: 100vh
+    position: fixed
+    height: 390px
+    flex-direction: column
+    +variable.set-flex(center, center)
+    .type
+        font-size: 24px
+        position: relative
+        font-weight: 700
+        color: variable.$main-black
+        margin-bottom: 25px
+        opacity: .3
+        transition: .3s all
+        letter-spacing: 3px
+        &::before
+            content: ''
+            width: 100%
+            height: 5px
+            background-color: variable.$main-pink
+            position: absolute
+            opacity: 0
+            bottom: -7px
+            transition: .3s all
+        &.active
+            opacity: 1
+            &::before
+                opacity: 1
