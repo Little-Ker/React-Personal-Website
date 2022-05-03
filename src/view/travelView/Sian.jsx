@@ -7,6 +7,13 @@ import {fetchTravelData} from '../../redux/travelSlice'
 import AOS from 'aos'
 import "aos/dist/aos.css"
 
+import bg01 from '../../assets/image/sian/bg01.jpg'
+import bg02 from '../../assets/image/sian/bg02.jpg'
+import bg03 from '../../assets/image/sian/bg03.jpg'
+import bird from '../../assets/image/sian/bird.png'
+import tree from '../../assets/image/sian/tree.png'
+import tree02 from '../../assets/image/sian/tree02.png'
+
 import ImgRotate from '../../component/travel/imgRotate/ImgRotate'
 import ChooseBanner from "../../component/travel/chooseBanner/ChooseBanner"
 
@@ -90,6 +97,20 @@ function Footer(props) {
     )
 }
 
+function Bg() {
+    return (
+        <div>
+            <img src={bird} className={styles.bird} alt="" />
+            <div className={styles.tree}>
+                <img data-aos="fade-left" data-aos-delay="1200" data-aos-duration="1000" src={tree} alt="" />
+            </div>
+            <div className={styles.tree2}>
+                <img data-aos="fade-right" data-aos-delay="1200" data-aos-duration="1000" src={tree02} alt="" />
+            </div>
+        </div>
+    )
+}
+
 function Sian() {
     const dispatch = useDispatch()
     useEffect(() => {
@@ -103,14 +124,15 @@ function Sian() {
 
     if (travelSianData.length === 0) return
     return (
-        <div style={{backgroundImage: `url(${travelSianData.introduce.bg02})`}} className={styles.sian}>
-            <div style={{backgroundImage: `url(${travelSianData.introduce.bg01})`}} className={styles.content}>
+        <div style={{backgroundImage: `url(${bg02})`}} className={styles.sian}>
+            <Bg />
+            <div style={{backgroundImage: `url(${bg01})`}} className={styles.content}>
                 <Title />
                 <LeftPoint data={travelSianData.terracottaArm} />
             </div>  
             <RightPoint data={travelSianData.hotSpring} />
             <BlackPoint data={travelSianData.park} />
-            <PointList data={travelSianData.eat} bg={travelSianData.introduce.bg03} />
+            <PointList data={travelSianData.eat} bg={bg03} />
             <Footer data={travelSianData.introduce} />
         </div>
     )

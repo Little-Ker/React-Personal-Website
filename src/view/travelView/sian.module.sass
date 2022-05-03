@@ -6,6 +6,25 @@
     margin-left: 80px
     font-family: "Poppins", sans-serif
     overflow: hidden
+    position: relative
+    .bird
+        position: absolute
+        width: 200px
+        right: 200px
+        top: 130px
+    .tree, .tree2
+        position: absolute
+        width: 550px
+        right: -70px
+        top: 250px
+        opacity: .6
+        img
+            width: 100%
+    .tree2
+        left: -20px
+        top: 280px
+        width: 620px
+        transform: rotate(5deg)
     .content
         width: calc(100% - 360px)
         +main.bg-fit()

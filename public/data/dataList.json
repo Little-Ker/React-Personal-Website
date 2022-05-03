@@ -76,10 +76,7 @@
     },
     "sian": {
       "introduce": {
-        "title": "西安",
-        "bg01": "/img/travel/sian/bg01.jpg",
-        "bg02": "/img/travel/sian/bg02.jpg",
-        "bg03": "/img/travel/sian/bg03.jpg"
+        "title": "西安"
       },
       "terracottaArm": {
         "title": "秦始皇陵",
