@@ -1,0 +1,85 @@
+@use '../../style/variable' as variable
+    
+.goalPhoto
+    +variable.set-flex(space-between, center)
+    width: 100%
+    .photoList
+        position: relative
+        width: 80%
+        height: 500px
+        .photo
+            width: 100%
+            height: 100%
+            background-color: #fff
+            padding: 15px
+            +variable.set-flex(space-between, center)
+            position: absolute
+            transform: rotate(-2deg)
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+            transition: 1s all
+            .goalImg
+                width: 70%
+            .content
+                width: 30%
+                flex-direction: column
+                +variable.set-flex(flex-start, center)
+                font-size: 22px
+                font-weight: 700
+                letter-spacing: 2px
+                align-items: center
+                color: variable.$main-black
+                padding: 60px 25px 80px 25px
+                p
+                    text-align: left
+                    margin-bottom: 30px
+            .title
+                position: absolute
+                padding: 15px 200px
+                background-color: variable.$brown-color
+                box-shadow: rgba(0, 0, 0, 0.15) -3px 3px 2.6px
+                color: #fff
+                right: 0
+                bottom: 60px
+                font-size: 24px
+                font-weight: 700
+                letter-spacing: 5px
+                text-shadow: 0.1em 0.1em 0.2em #000000af
+        .photo02
+            transform: rotate(20deg) translate(-100%, 700px)
+        .showPhoto02
+            transform: rotate(4deg) translate(0)
+        .photo03
+            transform: rotate(-10deg) translate(200px, 150%)
+        .showPhoto03
+            transform: rotate(-5deg) translate(0)
+    .right
+        .rightBtn
+            line-height: 120px
+            width: 120px
+            height: 120px
+            font-weight: 700
+            background-color: variable.$main-black-color
+            color: #fff
+            margin-bottom: 30px
+            border-radius: 50%
+            cursor: pointer
+            transition: .3s all
+            position: relative
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px
+            letter-spacing: 3px
+            font-size: 22px
+            font-family: "Poppins", Arial, sans-serif
+            &::after
+                content: ''
+                width: 120%
+                height: 120%
+                border: 2px dashed variable.$main-black-color
+                position: absolute
+                left: -12px
+                top: -12px
+                border-radius: 50% 
+            &:hover
+                background-color: #5c5959e0
+            &.hideRightBtn
+                opacity: .4
+                background-color: #5c5959e0

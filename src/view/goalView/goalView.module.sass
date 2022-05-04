@@ -1,0 +1,53 @@
+@use '../../style/variable' as variable
+@use '../../style/main' as main
+    
+.goalView
+    width: calc(100% - 80px)
+    margin-left: 80px
+    height: 100vh
+    background-color: variable.$main-bg
+    overflow: hidden
+    .bgCircle
+        position: fixed
+        left: 0
+        width: 100%
+        height: 100vh
+        .circleP
+            +main.bg-circle(variable.$pink-bg, 350px, -30px, 30px)
+        .circleY
+            +main.bg-circle(variable.$yellow-bg, 800px, 10%, 67%)
+        .circleO
+            +main.bg-circle(variable.$orange-bg, 1000px, 50%, -45%)
+        .circleP, .circleY, .circleO
+            animation: flyAnim 8s linear
+            animation-fill-mode: forwards
+            animation-iteration-count: infinite
+            opacity: .7
+    .goal
+        position: relative
+        width: 100%
+        height: 100%
+        flex-direction: column
+        display: flex
+        justify-content: center
+        align-items: center
+        .title
+            align-self: flex-start
+            margin-bottom: 60px
+            text-align: left
+            h1
+                color: variable.$main-pink
+                font-size: 36px
+            p
+                color: variable.$main-black
+                font-size: 20px
+                opacity: .9
+                margin-left: 3px
+
+@keyframes flyAnim 
+    0%
+        transform: translateY(0)
+    50%
+        transform: translateY(40px)
+    100%
+        transform: translateY(0)
