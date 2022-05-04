@@ -15,7 +15,7 @@ import TodoTestView from './view/testView/TodoTestView'
 const RouterPage = () => {
   return (
     <Routes>
-      <Route exact path="/" element={<Home/>} />
+      <Route exact path="/" element={<AboutView/>} />
       <Route exact path="about" element={<AboutView/>} />
       <Route exact path="travel" element={<TravelView/>} />
       <Route exact path="travel/asia" element={<Asia/>} />
@@ -25,7 +25,7 @@ const RouterPage = () => {
       <Route exact path="work" element={<WorkView/>} />
       <Route exact path="goal" element={<GoalView/>} />
       <Route exact path="test" element={<TodoTestView/>} />
-      <Route path="*" element={<Home/>} />
+      <Route path="*" element={<AboutView/>} />
     </Routes>
   )
 }

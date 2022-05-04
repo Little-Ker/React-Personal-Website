@@ -17,18 +17,18 @@ const NavList = () => {
     { title: 'About', to:'about' },
     { title: 'Travel', to:'travel' },
     { title: 'Work', to:'work' },
-    { title: 'Goal', to:'goal' },
-    { title: 'TodoTest', to:'test' },
+    { title: 'Goal', to:'goal' }
   ]
 
-  const location = useLocation().pathname.split('/')
+  let location = useLocation().pathname.split('/')[1]
+  if(location === '') location = 'about'
 
   return (
     <div className={styles.list}>
       <ul>
           {linkList.map((link, index) => (
             <Link key={index}
-             className={clsx(styles.link,location[1] === link.to && styles.active)}
+             className={clsx(styles.link,location === link.to && styles.active)}
              to={link.to}
             >{link.title}</Link>
           ))}
