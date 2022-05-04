@@ -15,7 +15,7 @@ import "aos/dist/aos.css"
 const workList = [{
     company: "長青資訊",
     icon: <SportsEsportsIcon className={styles.iconSize} />,
-    txt: [ "遊戲前端工程師", "? 款老虎機遊戲", "1 款骰寶遊戲" ]
+    txt: [ "遊戲前端工程師", "13 款老虎機遊戲", "1 款骰寶遊戲" ]
 },{
     company: "轉職時期",
     icon: <EditRoadOutlinedIcon className={styles.iconSize} />,

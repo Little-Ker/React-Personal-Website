@@ -19,6 +19,10 @@ function TypeNav() {
 
     return (
         <div className={styles.typeNav}>
+            <div className={styles.title}>
+                <h1>工作經驗</h1>
+                <p>Experience</p>
+            </div>
             {typeList.map((type, index) => (
                 <p id={`type${index}`} key={index} className={clsx(styles.type, (index === typeIndex && styles.active)) }>{type}</p>
             ))}

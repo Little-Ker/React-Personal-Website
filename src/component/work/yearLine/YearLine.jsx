@@ -8,13 +8,11 @@ const yearList = [
 ]
 
 function timeLineDelay(index) {
-    console.log('index',index);
     if(index <= 2) return 300 * (index - 1)
     return 0
 }
 
 function timeLineShowAnim(index) {
-    console.log('index',index);
     if(index === 0) return ''
     return 'fade-up'
 }
