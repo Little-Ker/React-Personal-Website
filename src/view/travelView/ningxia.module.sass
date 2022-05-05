@@ -17,9 +17,10 @@
             font-size: 54px
             z-index: 2
             position: absolute
-            left: 15%
-            top: 35%
-            line-height: 2.2
+            left: 10%
+            top: 30%
+            letter-spacing: 3px
+            line-height: 2.5
             span
                 background-color: #fff
                 padding: 10px 30px
@@ -27,24 +28,26 @@
                 margin-top: 20px
         .bannerImg
             +main.bg-fit
-            background-attachment: fixed
-            width: 70%
-            height: 100%
     .introduce
         +variable.set-flex(center, center)
-        margin-top: 100px
-        margin-bottom: 100px
+        margin-top: 150px
+        margin-bottom: 150px
+        position: relative
+        .paper
+            position: absolute
+            width: 100%
+            top: -120px
         .introduceImg
             width: 50%
-            height: 420px
-            position: relative
+            margin-left: 40px
         .introduceTxt
-            font-family: 'Poppins', sans-serif
-            font-weight: 700
+            position: relative
             width: 50%
+            left: -30px
             padding: 60px
             line-height: 2.4
-            font-size: 18px
+            font-size: 20px
+            color: #46423b
     .mountain
         height: 420px
         display: flex
@@ -64,6 +67,10 @@
             &:hover
                 .blackHide
                     opacity: 0
+    .desertBg
+        padding: 80px 0
+        position: relative
+        background-attachment: fixed
     .point
         margin-top: 80px
         margin-bottom: 80px
@@ -71,6 +78,11 @@
         p
             text-align: left
             margin-bottom: 15px
+            color: #fff
+            letter-spacing: 3px
+            text-shadow: 0.1em 0.1em 0.2em #000000af
+        img
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px
         .list
             +variable.set-flex(space-between, flex-end)
             .item

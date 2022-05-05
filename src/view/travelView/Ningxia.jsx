@@ -8,6 +8,10 @@ import {fetchTravelData} from '../../redux/travelSlice'
 import AOS from 'aos'
 import "aos/dist/aos.css"
 
+import bg01 from '../../assets/image/ningxia/bg01.jpg'
+import bg02 from '../../assets/image/ningxia/bg02.jpg'
+import paper from '../../assets/image/ningxia/paper.png'
+
 const imgSize = (size) => {
     return {
         width: `${size}%`
@@ -52,8 +56,9 @@ function Point(props) {
 function Introduce(props) {
     return (
         <div className={`container1280 ${styles.introduce}`}>
-            <img  data-aos="fade-right" src={props.data.imgUrl} alt="圖片" className={`img-fit ${styles.introduceImg}`} />
-            <p data-aos="fade-left" className={styles.introduceTxt}>{props.data.content}</p>
+            <img src={paper} className={styles.paper} alt="" />
+            <img data-aos="fade-right" data-aos-anchor-placement="top-center" src={props.data.imgUrl} alt="圖片" className={`img-fit ${styles.introduceImg}`} />
+            <p data-aos="fade-left" data-aos-anchor-placement="top-center" className={styles.introduceTxt}>{props.data.content}</p>
         </div>  
     )
 }
@@ -61,13 +66,13 @@ function Introduce(props) {
 function Banner(props) {
     return (
         <div className={styles.banner}>
-            <p data-aos="zoom-in-right" className={styles.title}>
+            <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300" className={styles.title}>
                 <span>海旅會研學之旅</span>
                 <br></br>
                 <span>{props.data.title}文化</span>
             </p>
             <div style={{backgroundImage: `url(${props.data.banner})`}} className={styles.bannerImg}></div>
-        </div>  
+        </div>
     )
 }
 
@@ -92,12 +97,14 @@ function Ningxia() {
 
     if (travelNingxiaData.length === 0) return
     return (
-        <div className={styles.ningxia}>
+        <div style={{backgroundImage: `url(${bg01})`}} className={`${styles.ningxia}`}>
             <Banner data={travelNingxiaData.introduce} />
             <Introduce data={travelNingxiaData.introduce} />
             <BlackPoint data={travelNingxiaData.camel} />
-            <Point data={travelNingxiaData.movie} size01={25} size02={50} size03={25} />
-            <Point data={travelNingxiaData.yellowRiver} size01={50} size02={25} size03={25} />
+            <div style={{backgroundImage: `url(${bg02})`}} className={`bg-fit ${styles.desertBg}`}>
+                <Point data={travelNingxiaData.movie} size01={25} size02={50} size03={25} />
+                <Point data={travelNingxiaData.yellowRiver} size01={50} size02={25} size03={25} />
+            </div>
             <BlackPoint data={travelNingxiaData.mountain} />
             <Footer data={travelNingxiaData.introduce} />
         </div>
