@@ -4,6 +4,25 @@
     {"title": "休閒運動", "content": "22"},
     {"title": "出生地", "content": "33"}
   ],
+  "aboutData": {
+    "familyData": [{
+      "title": "兒時版 Gugi",
+      "img": [
+        "/img/family/01.jpg", 
+        "/img/family/02.jpg", 
+        "/img/family/03.jpg", 
+        "/img/family/04.jpg"
+      ]
+    },{
+      "title": "壯大版 Gugi",
+      "img": [
+        "https://images.unsplash.com/photo-1533827432537-70133748f5c8", 
+        "https://images.unsplash.com/photo-1533827432537-70133748f5c8", 
+        "https://images.unsplash.com/photo-1533827432537-70133748f5c8", 
+        "https://picsum.photos/600/1200"
+      ]
+    }]
+  },
   "travelData": {
     "banner": [
       {"title": "亞洲大學", "to": "/travel/asia", "imgUrl": "/img/travel/banner01.jpg", "startDate": "2015 - 09", "overDate": "2019 - 06"},
