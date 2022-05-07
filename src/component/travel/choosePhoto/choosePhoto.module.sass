@@ -2,13 +2,14 @@
 @use '../../../style/main' as main
     
 .choosePhoto
-    margin-top: 120px
+    margin-top: 120px !important
     +variable.set-flex(space-between, center)
     height: 600px
     .photoList
         width: 50%
         position: relative
         top: -50%
+        left: -50px
         .photoBg
             position: absolute
             background-color: #fff

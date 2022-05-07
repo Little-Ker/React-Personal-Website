@@ -7,9 +7,26 @@
     position: relative
     width: calc(100% - 80px)
     margin-left: 80px
-    .circleY
-        +main.bg-circle(variable.$yellow-bg, 350px, -30px, 30px)
-    .circleP
-        +main.bg-circle(variable.$pink-bg, 1000px, 62%, -25%)
-    .circleO
-        +main.bg-circle(variable.$orange-bg, 800px, 10%, 25%)
+    .bgCircle
+        width: 100%
+        height: 100%
+        position: fixed
+        .circleY
+            +main.bg-circle(variable.$yellow-bg, 350px, -30px, 30px)
+        .circleP
+            +main.bg-circle(variable.$pink-bg, 1000px, 62%, -40%)
+        .circleO
+            +main.bg-circle(variable.$orange-bg, 800px, 10%, 55%)
+        .circleP, .circleY, .circleO
+            animation: flyAnim 8s linear
+            animation-fill-mode: forwards
+            animation-iteration-count: infinite
+            opacity: .7
+
+@keyframes flyAnim 
+    0%
+        transform: translateY(0)
+    50%
+        transform: translateY(40px)
+    100%
+        transform: translateY(0)

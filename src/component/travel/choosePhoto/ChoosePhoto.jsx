@@ -27,13 +27,15 @@ function ChoosePhoto(props) {
     }]
 
     const [photoIndex, setPhotoIndex] = useState(2)
+    const [title, setTitle] = useState("")
+    const [txt, setTxt] = useState("")
     useEffect(() => {
-        document.querySelector('#photoTitle').innerHTML = pList[photoIndex].title
-        document.querySelector('#photoTxt').innerHTML = pList[photoIndex].txt
+        setTitle(pList[photoIndex].title)
+        setTxt(pList[photoIndex].txt)
     }, [photoIndex])
 
     return (
-        <div className={styles.choosePhoto}>
+        <div className={`container1280 ${styles.choosePhoto}`}>
             <div className={styles.photoList}>
                 {photoPosList.map((pos, index) => (
                     <div key={index} data-aos="zoom-out-up" data-aos-anchor-placement="top-center" data-aos-delay={500 * index}>
@@ -45,8 +47,8 @@ function ChoosePhoto(props) {
                 ))}
             </div>
             <div data-aos="fade-left" data-aos-delay="1500" className={styles.txt}>
-                <h2 id="photoTitle">{pList[2].title}</h2>
-                <p id="photoTxt">{pList[2].txt}</p>
+                <h2 id="photoTitle">{title}</h2>
+                <p id="photoTxt">{txt}</p>
             </div>
         </div>
     )
