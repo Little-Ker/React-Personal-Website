@@ -8,21 +8,25 @@ import AddIcon from '@mui/icons-material/Add'
 function TravelView() {
     const dispatch = useDispatch()
     const travelBannerDate = useSelector(state => state.travelDate.travelBannerData) // <-- 拿取資料
-
     useEffect(() => {
         dispatch(fetchTravelData())
     }, [dispatch])
+
+    function fadePos(index) {
+        if(index % 2 === 1) return "fade-up"
+        return "fade-down"
+    }
 
     return (
         <div className={styles.bg}>
             <div className={styles.travelList}>
                 {travelBannerDate.map((item, index) => (
-                    <Link key={index} to={item.to} className={styles.point}>
+                    <Link data-aos={fadePos(index)} data-aos-duration="1200" key={index} to={item.to} className={styles.point}>
                         <img className="img-fit" alt={item.title} src={item.imgUrl}></img>
                         <div className={styles.blackHide}>
-                            <div className={styles.title}>{item.title}</div>
+                            <div data-aos="fade-up" data-aos-delay="1200" data-aos-duration="800" className={styles.title}>{item.title}</div>
                             <div className={styles.txtBox}>
-                                <p className={styles.date}>
+                                <p data-aos="fade-down" data-aos-delay="1200" data-aos-duration="800" className={styles.date}>
                                     {item.startDate}
                                     <br></br>
                                     {item.overDate}

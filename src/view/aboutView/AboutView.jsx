@@ -1,8 +1,12 @@
+import React, { useEffect } from "react"
 import styles from './aboutView.module.sass'
 import '../../style/main.sass'
 
 import Me from '../../component/about/me/Me'
 import Introduce from '../../component/about/introduce/Introduce'
+
+import AOS from 'aos'
+import "aos/dist/aos.css"
 
 function BgCircle() {
     return (
@@ -14,7 +18,13 @@ function BgCircle() {
     )
 }
 
-function aboutView() {
+function AboutView() {
+    useEffect(() => {
+        AOS.init({
+            duration : 800
+        })
+    })
+
     return (
         <div className={styles.bg}>
             <BgCircle />
@@ -25,4 +35,4 @@ function aboutView() {
         </div>
     )
 }
-export default aboutView;
+export default AboutView

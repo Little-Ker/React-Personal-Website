@@ -24,7 +24,6 @@ function PhotoSwiper() {
     useEffect(() => {
         dispatch(fetchTravelData())
         dispatch(initAsiaCount())
-        console.log('travelAsiaDate',travelAsiaDate);
     }, [dispatch])
 
     const [swiper1, setSwiper1] = useState(null)

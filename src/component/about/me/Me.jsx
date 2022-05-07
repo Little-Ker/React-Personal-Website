@@ -4,9 +4,9 @@ import Dot from '../../dot/Dot'
 function Introduce(props) {
   return(
     <div className={styles.person}>
-      <div className={styles.photo}></div>
-      <div className={styles.photoFrame}></div>
-      <div className={styles.text}>
+      <div data-aos="fade-down-left" data-aos-delay="400" className={styles.photo}></div>
+      <div data-aos="fade-down-left" className={styles.photoFrame}></div>
+      <div data-aos="fade-left" data-aos-delay="1000" className={styles.text}>
           <div className={styles.shadowText}>
             <div className={styles.shadow}>{props.title}</div>
             <div className={styles.text2}>{props.title}</div>
