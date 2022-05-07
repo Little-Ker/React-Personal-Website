@@ -23,6 +23,10 @@ const NavList = () => {
   let location = useLocation().pathname.split('/')[1]
   if(location === '') location = 'about'
 
+  const moveTop = () => {
+    window.scrollTo(0, 0)
+  }
+
   return (
     <div className={styles.list}>
       <ul>
@@ -30,6 +34,7 @@ const NavList = () => {
             <Link key={index}
              className={clsx(styles.link,location === link.to && styles.active)}
              to={link.to}
+             onClick={() => {moveTop()}}
             >{link.title}</Link>
           ))}
       </ul>
