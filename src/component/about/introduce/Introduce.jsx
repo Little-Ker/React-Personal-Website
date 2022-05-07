@@ -3,6 +3,7 @@ import styles from './introduce.module.sass'
 import clsx from 'clsx'
 
 import Environment from '../environment/Environment'
+import Family from '../family/Family'
 import Interest from '../interest/Interest'
 
 function Introduce() {
@@ -13,7 +14,7 @@ function Introduce() {
             content: <Environment />
         },
         {   title: '家庭成員',
-            content: <Environment />
+            content: <Family />
         },
         { title: '興趣',
             content: <Interest />
