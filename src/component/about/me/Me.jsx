@@ -1,10 +1,15 @@
 import styles from './me.module.sass'
+import '../../../style/main.sass'
 import Dot from '../../dot/Dot'
+
+import vivi from '../../../assets/image/about/vivi.jpg'
 
 function Introduce(props) {
   return(
     <div className={styles.person}>
-      <div data-aos="fade-down-left" data-aos-delay="400" className={styles.photo}></div>
+      <div data-aos="fade-down-left" data-aos-delay="400" className={styles.photo}>
+        <img src={vivi} className="img-fit"  alt="" />
+      </div>
       <div data-aos="fade-down-left" className={styles.photoFrame}></div>
       <div data-aos="fade-left" data-aos-delay="1000" className={styles.text}>
           <div className={styles.shadowText}>

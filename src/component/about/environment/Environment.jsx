@@ -11,6 +11,21 @@ import 'swiper/css/virtual'
 import "swiper/css/pagination"
 import "swiper/css/navigation"
 
+import img01 from '../../../assets/image/about/01.jpg'
+import img02 from '../../../assets/image/about/02.jpg'
+import img03 from '../../../assets/image/about/03.jpg'
+
+const swiperAry = [{
+    title: '台中神岡',
+    imgUrl: img01
+},{
+    title: '潭雅神綠園道',
+    imgUrl: img02
+},{
+    title: '香水百合',
+    imgUrl: img03
+}]
+
 function Environment() {
     return(
         <div className={styles.environment}>
@@ -20,8 +35,6 @@ function Environment() {
 }
 
 function PhotoSwiper() {
-    const swiperAry = ['台中神岡', '潭雅神綠園道', '香水百合']
-
     const [swiper, setSwiper] = useState(null)
     const [selected, setSelected] = useState(0)
 
@@ -39,17 +52,17 @@ function PhotoSwiper() {
                     clickable: true,
                 }}
                 modules={[Mousewheel, Pagination, Navigation]}
-                className={styles.swiper}
+                className={`swiper-no-swiping ${styles.swiper}`}
             >
                 {swiperAry.map((val, index) => (
                 <SwiperSlide key={index}>
-                    <img className="img-fit" src={`https://picsum.photos/800?random=${index}`}></img>
+                    <img className="img-fit" alt="" src={val.imgUrl}></img>
                 </SwiperSlide>
                 ))}
             </Swiper>
             <div className={styles.btnList}>
                 {swiperAry.map((val, index) => (
-                    <Button key={index} variant="outlined" className={clsx(styles.btn, selected === index && styles.active)} onClick={() => {slideTo(index);setSelected(index)}}>{val}</Button>
+                    <Button key={index} variant="outlined" className={clsx(styles.btn, selected === index && styles.active)} onClick={() => {slideTo(index);setSelected(index)}}>{val.title}</Button>
                 ))}
             </div>
         </div>

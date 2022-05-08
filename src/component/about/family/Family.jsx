@@ -40,7 +40,7 @@ function srcset(image, size, rows = 1, cols = 1) {
 }
 
 function Family() {
-    const [selected, setSelected] = useState(1)
+    const [selected, setSelected] = useState(0)
 
     const dispatch = useDispatch()
     useEffect(() => {

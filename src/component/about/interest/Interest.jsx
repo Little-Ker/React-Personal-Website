@@ -11,7 +11,7 @@ function Interest() {
     const interestList = [
         [{
             title: '看動畫', icon: <TvIcon className={styles.iconSize} />,
-            content: '...'
+            content: '喜歡競技、運動類的動畫。'
         },
         {
             title: '休閒散步', icon: <DirectionsWalkIcon className={styles.iconSize} />,
@@ -20,14 +20,6 @@ function Interest() {
         {
             title: '排版設計', icon: <BrushIcon className={styles.iconSize} />,
             content: '喜歡欣賞漂亮網頁。'
-        },
-        {
-            title: '旅遊', icon: <LuggageIcon className={styles.iconSize} />,
-            content: '到處吃吃喝喝看世界。'
-        },
-        {
-            title: '旅遊', icon: <LuggageIcon className={styles.iconSize} />,
-            content: '到處吃吃喝喝看世界。'
         },
         {
             title: '旅遊', icon: <LuggageIcon className={styles.iconSize} />,
