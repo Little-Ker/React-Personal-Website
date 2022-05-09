@@ -57,8 +57,8 @@ function Introduce(props) {
     return (
         <div className={`container1280 ${styles.introduce}`}>
             <img src={paper} className={styles.paper} alt="" />
-            <img data-aos="fade-right" data-aos-anchor-placement="top-center" src={props.data.imgUrl} alt="圖片" className={`img-fit ${styles.introduceImg}`} />
-            <p data-aos="fade-left" data-aos-anchor-placement="top-center" className={styles.introduceTxt}>{props.data.content}</p>
+            <img data-aos="fade-right" data-aos-anchor-placement="center-center" src={props.data.imgUrl} alt="圖片" className={`img-fit ${styles.introduceImg}`} />
+            <p data-aos="fade-left" data-aos-anchor-placement="center-center" className={styles.introduceTxt}>{props.data.content}</p>
         </div>  
     )
 }
