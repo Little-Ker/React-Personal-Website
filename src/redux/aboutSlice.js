@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 
 export const fetchAboutData  = createAsyncThunk(
@@ -21,7 +21,7 @@ export const aboutSlice = createSlice({
                 state.aboutFamilyData = action.payload.familyData
         })
     }
-});
+})
 
 export const { addAsiaCount, initAsiaCount } = aboutSlice.actions
 export default aboutSlice.reducer

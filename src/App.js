@@ -1,7 +1,7 @@
+import React from "react"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Nav from './component/nav/Nav'
-import Home from './view/home/Home'
 import AboutView from './view/aboutView/AboutView'
 import TravelView from './view/travelView/TravelView'
 import Asia from './view/travelView/Asia'
@@ -38,7 +38,7 @@ function App() {
         <RouterPage />
       </Router>
     </div>
-  );
+  )
 }
  
-export default App;
+export default App

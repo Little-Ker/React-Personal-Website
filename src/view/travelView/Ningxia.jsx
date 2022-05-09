@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-
+import PropTypes from 'prop-types'
 import styles from './ningxia.module.sass'
 import '../../style/main.sass'
 import { useDispatch, useSelector } from 'react-redux'
@@ -15,7 +15,7 @@ import paper from '../../assets/image/ningxia/paper.png'
 const imgSize = (size) => {
     return {
         width: `${size}%`
-    };
+    }
 }
 
 function BlackPoint(props) {
@@ -32,54 +32,77 @@ function BlackPoint(props) {
     )
 }
 
+BlackPoint.propTypes = {
+    data: PropTypes.array.isRequired
+}
+
 function Point(props) {
+    const { data, size01, size02, size03 } = props
     return (
         <div className={`container1280 ${styles.point}`}>
             <div className={styles.list}>
-                <div data-aos="fade-left" className={styles.item} style={imgSize(props.size01)}>
-                    <p>{props.data.title01}</p>
-                    <img className="img-fit" src={props.data.imgUrl01} alt="" />
+                <div data-aos="fade-left" className={styles.item} style={imgSize(size01)}>
+                    <p>{data.title01}</p>
+                    <img className="img-fit" src={data.imgUrl01} alt="" />
                 </div>
-                <div data-aos="fade-left" data-aos-delay="300" className={styles.item} style={imgSize(props.size02)}>
-                    <p>{props.data.title02}</p>
-                    <img className="img-fit" src={props.data.imgUrl02} alt="" />
+                <div data-aos="fade-left" data-aos-delay="300" className={styles.item} style={imgSize(size02)}>
+                    <p>{data.title02}</p>
+                    <img className="img-fit" src={data.imgUrl02} alt="" />
                 </div>
-                <div data-aos="fade-left" data-aos-delay="600" className={styles.item} style={imgSize(props.size03)}>
-                    <p>{props.data.title03}</p>
-                    <img className="img-fit" src={props.data.imgUrl03} alt="" />
+                <div data-aos="fade-left" data-aos-delay="600" className={styles.item} style={imgSize(size03)}>
+                    <p>{data.title03}</p>
+                    <img className="img-fit" src={data.imgUrl03} alt="" />
                 </div>
             </div>
         </div>
     )
 }
 
+Point.propTypes = {
+    data: PropTypes.object.isRequired,
+    size01: PropTypes.number.isRequired,
+    size02: PropTypes.number.isRequired,
+    size03: PropTypes.number.isRequired
+}
+
 function Introduce(props) {
+    const data = props.data
     return (
         <div className={`container1280 ${styles.introduce}`}>
             <img src={paper} className={styles.paper} alt="" />
-            <img data-aos="fade-right" data-aos-anchor-placement="center-center" src={props.data.imgUrl} alt="圖片" className={`img-fit ${styles.introduceImg}`} />
-            <p data-aos="fade-left" data-aos-anchor-placement="center-center" className={styles.introduceTxt}>{props.data.content}</p>
+            <img data-aos="fade-right" data-aos-anchor-placement="center-center" src={data.imgUrl} alt="圖片" className={`img-fit ${styles.introduceImg}`} />
+            <p data-aos="fade-left" data-aos-anchor-placement="center-center" className={styles.introduceTxt}>{data.content}</p>
         </div>  
     )
 }
 
+Introduce.propTypes = {
+    data: PropTypes.object.isRequired
+}
+
 function Banner(props) {
+    const data = props.data
     return (
         <div className={styles.banner}>
             <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300" className={styles.title}>
                 <span>海旅會研學之旅</span>
                 <br></br>
-                <span>{props.data.title}文化</span>
+                <span>{data.title}文化</span>
             </p>
-            <div style={{backgroundImage: `url(${props.data.banner})`}} className={styles.bannerImg}></div>
+            <div style={{backgroundImage: `url(${data.banner})`}} className={styles.bannerImg}></div>
         </div>
     )
 }
 
+Banner.propTypes = {
+    data: PropTypes.object.isRequired
+}
+
 function Footer(props) {
+    const data = props
     return (
         <div className={styles.footer}>
-            <p>華夏文明 薪火相傳 - {props.data.title}研學之旅</p>
+            <p>華夏文明 薪火相傳 - {data.title}研學之旅</p>
         </div>  
     )
 }
@@ -111,4 +134,4 @@ function Ningxia() {
     )
 }
 
-export default Ningxia;
+export default Ningxia

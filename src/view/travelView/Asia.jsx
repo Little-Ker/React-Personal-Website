@@ -14,7 +14,7 @@ import 'swiper/css'
 import 'swiper/css/virtual'
 import "swiper/css/pagination"
 import "swiper/css/navigation"
-import "swiper/css/effect-fade";
+import "swiper/css/effect-fade"
 
 function PhotoSwiper() {
     const dispatch = useDispatch()
@@ -31,8 +31,8 @@ function PhotoSwiper() {
     const [isChangeOver, setChangeSlideOver] = useState(false)
     const slideTo = () => {
         if(swiper1 && swiper2 && !isChangeOver) {
-            swiper1.slideNext();
-            swiper2.slideNext();
+            swiper1.slideNext()
+            swiper2.slideNext()
             setChangeSlideOver(true)
             dispatch(addAsiaCount())
             setTimeout(() => {
@@ -119,4 +119,4 @@ function Asia() {
     )
 }
 
-export default Asia;
+export default Asia

@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux"
 import {React, useEffect} from 'react'
 import {fetchTitleData, selectAllPosts} from '../../redux/todoTestSlice'
 
@@ -19,7 +19,7 @@ const TodoTestList = () => {
                 <li key={index}>{val.title}</li>
             ))}
         </ul>
-    );
-};
+    )
+}
  
-export default TodoTestList;
+export default TodoTestList

@@ -1,3 +1,5 @@
+import React from "react"
+import PropTypes from 'prop-types'
 import styles from './imgRotate.module.sass'
 
 function ImgRotate(props) {
@@ -9,4 +11,8 @@ function ImgRotate(props) {
     )
 }
 
-export default ImgRotate;
+export default ImgRotate
+
+ImgRotate.propTypes = {
+    item: PropTypes.object.isRequired
+}

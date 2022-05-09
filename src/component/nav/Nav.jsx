@@ -1,4 +1,5 @@
-import { Link, useLocation  } from "react-router-dom";
+import React from "react"
+import { Link, useLocation  } from "react-router-dom"
 import PropTypes from 'prop-types'
 import styles from './nav.module.sass'
 import clsx from 'clsx'
@@ -9,7 +10,7 @@ const Avatar = (prop) => {
       {/* <div className={styles.photo}></div> */}
       <div className={styles.name}>{prop.name}</div>
     </div>
-  );
+  )
 }
 
 const NavList = () => {
@@ -39,7 +40,7 @@ const NavList = () => {
           ))}
       </ul>
     </div>
-  );
+  )
 }
 
 export default function Nav(prop) {
@@ -52,5 +53,5 @@ export default function Nav(prop) {
 }
 
 Nav.propTypes = {
-  name: PropTypes.string
-};
+  name: PropTypes.string.isRequired
+}

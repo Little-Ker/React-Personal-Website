@@ -1,14 +1,15 @@
-import clsx from "clsx";
+import clsx from "clsx"
 import React, { useState, useEffect } from "react"
+import PropTypes from 'prop-types'
 import styles from './chooseBanner.module.sass'
 
 function ChooseBanner(props) {
     const [chooseIndex, setChooseIndex] = useState(0)
     useEffect(() => {
-        const imgUrl = props.pointList[chooseIndex];
+        const imgUrl = props.pointList[chooseIndex]
 
         document.querySelector(`#${props.setBannerId}`).style.backgroundImage = `url(${imgUrl})`
-    }, [chooseIndex]);
+    }, [chooseIndex])
 
     return(
         <div id={props.setBannerId} style={{backgroundImage: `url(${props.pointList[0]})`}} className={`changeImg ${styles.poitImg}`}>
@@ -22,3 +23,9 @@ function ChooseBanner(props) {
 }
 
 export default ChooseBanner
+
+ChooseBanner.propTypes = {
+    pointList: PropTypes.array.isRequired,
+    setBannerId: PropTypes.string.isRequired,
+    btnPosRight: PropTypes.bool.isRequired
+}

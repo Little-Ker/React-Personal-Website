@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import styles from './choosePhoto.module.sass'
 import clsx from 'clsx'
+import PropTypes from 'prop-types'
 
 const photoPosStyle = (left, top, rotate) => {
     return {
@@ -55,3 +56,7 @@ function ChoosePhoto(props) {
 }
 
 export default ChoosePhoto
+
+ChoosePhoto.propTypes = {
+    data: PropTypes.array.isRequired
+}

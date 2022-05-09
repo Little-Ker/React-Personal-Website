@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import styles from './zhangjiajie.module.sass'
 import '../../style/main.sass'
+import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import {fetchTravelData} from '../../redux/travelSlice'
 
@@ -38,9 +39,10 @@ function CirclePointBg() {
 }
 
 function CirclePoint(props) {
+    const data = props.data
     return (
         <div className={styles.circlePointList}>
-            {props.data.map((item, index) => (
+            {data.map((item, index) => (
                 <div data-aos="zoom-in-left" data-aos-delay={index * 300} key={index} className={styles.point}>
                     <div className={styles.cirlceImg}>
                         <img className="img-fit" src={item.imgUrl} alt="" />
@@ -53,7 +55,12 @@ function CirclePoint(props) {
     )
 }
 
+CirclePoint.propTypes = {
+    data: PropTypes.array.isRequired
+}
+
 function BlackPoint(props) {
+    const data = props.data
     function fadePos(index) {
         if(index % 2 === 1) return "fade-left"
         return "fade-right"
@@ -61,7 +68,7 @@ function BlackPoint(props) {
 
     return (
         <div className={styles.blackPoint}>
-            {props.data.map((item, index) => (
+            {data.map((item, index) => (
                 <div data-aos={fadePos(index)} key={index} style={{backgroundImage: `url(${item.imgUrl})`}} className={`bg-fit ${styles.item}`}>
                     <div className={styles.blackHide}>
                         <p data-aos="flip-left" data-aos-delay="600">{item.title}</p>
@@ -72,14 +79,23 @@ function BlackPoint(props) {
     )
 }
 
+BlackPoint.propTypes = {
+    data: PropTypes.array.isRequired
+}
+
 function Banner(props) {
+    const data = props.data
     return (
         <div style={{backgroundImage: `url(${bannerBg})`}} className={`bg-fit ${styles.banner}`}>
             <Title />
             <Cloud />
-            <ChoosePhoto data={props.data} />
+            <ChoosePhoto data={data} />
         </div>
     )
+}
+
+Banner.propTypes = {
+    data: PropTypes.array.isRequired
 }
 
 function Footer() {

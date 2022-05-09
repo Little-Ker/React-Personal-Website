@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react"
 import styles from './family.module.sass'
 import '../../../style/main.sass'
 import clsx from 'clsx'
+import PropTypes from 'prop-types'
 
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import Button from '@mui/material/Button';
+import ImageList from '@mui/material/ImageList'
+import ImageListItem from '@mui/material/ImageListItem'
+import Button from '@mui/material/Button'
 import Dialog from '@mui/material/Dialog'
 import DialogContent from '@mui/material/DialogContent'
 import Slide from '@mui/material/Slide'
@@ -65,10 +66,11 @@ function Family() {
 export default Family
 
 const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
+  return <Slide direction="up" ref={ref} {...props} />
+})
 
 function ImageItem(props) {
+    const { imgUrl, size } = props
     const [open, setOpen] = useState(false)
     const handleClickOpen = () => {
         setOpen(true)
@@ -78,9 +80,9 @@ function ImageItem(props) {
     }
 
     return (
-        <ImageListItem key={props.item} cols={props.size.cols || 1} rows={props.size.rows || 1}>
+        <ImageListItem key={imgUrl} cols={size.cols || 1} rows={size.rows || 1}>
           <img
-            {...srcset(props.item, 121, props.size.rows, props.size.cols)}
+            {...srcset(imgUrl, 121, size.rows, size.cols)}
             alt=""
             loading="lazy"
             onClick={handleClickOpen}
@@ -93,14 +95,20 @@ function ImageItem(props) {
             aria-labelledby="responsive-dialog-title"
           >
             <DialogContent>
-                <img src={props.item} className="img-fit" alt="" />
+                <img src={imgUrl} className="img-fit" alt="" />
             </DialogContent>
           </Dialog>
         </ImageListItem>
     )
 }
 
+ImageItem.propTypes = {
+  imgUrl: PropTypes.string.isRequired,
+  size: PropTypes.object.isRequired
+}
+
 function QuiltedImageList(props) {
+  const { data } = props
   return (
     <ImageList
       variant="quilted"
@@ -108,9 +116,13 @@ function QuiltedImageList(props) {
       rowHeight={121}
       className={styles.imageList}
     >
-      {props.data.map((item, index) => (
-        <ImageItem key={index} item={item} size={imgSize[index]} />
+      {data.map((item, index) => (
+        <ImageItem key={index} imgUrl={item} size={imgSize[index]} />
       ))}
     </ImageList>
-  );
+  )
+}
+
+QuiltedImageList.propTypes = {
+  data: PropTypes.array.isRequired
 }

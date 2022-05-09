@@ -1,3 +1,4 @@
+import React from "react"
 import styles from './cloud.module.sass'
 import cloud from '../../../assets/image/zhangjiajie/cloud.png'
 import clsx from 'clsx'

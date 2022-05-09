@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styles from './environment.module.sass'
 import '../../../style/main.sass'
 import clsx from 'clsx'
-import Button from '@mui/material/Button';
+import Button from '@mui/material/Button'
 
 import { Mousewheel, Pagination, Navigation } from "swiper"
 import { Swiper, SwiperSlide  } from 'swiper/react'

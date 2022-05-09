@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 
 export const fetchTitleData  = createAsyncThunk(
@@ -44,7 +44,7 @@ extraReducers: (builder) => {
             state.error = action.error.message
         })
     }
-});
+})
 
 // export const addTodoAsync = todo => dispatch => {
 //     console.log('async:', todo);
@@ -54,5 +54,5 @@ extraReducers: (builder) => {
 // }
 
 // export const { addTodo } = todoTestSlice.actions
-export default todoTestSlice.reducer;
+export default todoTestSlice.reducer
 export const selectAllPosts = (state) => state.todoTest.titleData

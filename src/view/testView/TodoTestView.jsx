@@ -1,4 +1,5 @@
-import TodoTestList from "../../component/todoTest/TodoTestList";
+import React from "react"
+import TodoTestList from "../../component/todoTest/TodoTestList"
 import { useDispatch } from 'react-redux'
 // import {
 //     addTodo,
@@ -6,7 +7,6 @@ import { useDispatch } from 'react-redux'
 // } from '../../redux/todoTestSlice'
 
 const TodoTestView = () => {
-    const dispatch = useDispatch()
     return (
         <div>
             <h1>Todo</h1>
@@ -14,7 +14,7 @@ const TodoTestView = () => {
             <button onClick={() => dispatch(addTodoAsync('test2'))}>addAsync</button> */}
             <TodoTestList />
         </div>
-    );
-};
+    )
+}
  
-export default TodoTestView;
+export default TodoTestView

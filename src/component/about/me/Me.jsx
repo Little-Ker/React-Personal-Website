@@ -1,5 +1,7 @@
+import React from "react"
 import styles from './me.module.sass'
 import '../../../style/main.sass'
+import PropTypes from 'prop-types'
 import Dot from '../../dot/Dot'
 
 import vivi from '../../../assets/image/about/vivi.jpg'
@@ -35,7 +37,12 @@ function Me() {
       <div className={styles.meBg}>
         <Introduce title={introduceTxt.title} content={introduceTxt.content} />
       </div>
-  );
+  )
 }
 
-export default Me;
+export default Me
+
+Introduce.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired
+}

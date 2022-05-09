@@ -2,7 +2,8 @@ import React, { useEffect } from "react"
 import styles from './sian.module.sass'
 import '../../style/main.sass'
 import { useDispatch, useSelector } from 'react-redux'
-import {fetchTravelData} from '../../redux/travelSlice'
+import { fetchTravelData } from '../../redux/travelSlice'
+import PropTypes from 'prop-types'
 
 import AOS from 'aos'
 import "aos/dist/aos.css"
@@ -28,38 +29,53 @@ function Title() {
 }
 
 function LeftPoint(props) {
+    const data = props.data
     return (
         <div className={`${styles.point}`}>
             <div data-aos-anchor-placement="top-center" data-aos="fade-right" className={styles.bannerPos}>
-                <ChooseBanner setBannerId='banner01' pointList={props.data.imgList} btnPosRight={true}  />
+                <ChooseBanner setBannerId='banner01' pointList={data.imgList} btnPosRight={true}  />
             </div>
-            <div data-aos="fade-left" data-aos-anchor-placement="top-center" className={styles.txt}>
-                <h1 data-aos="flip-left" data-aos-delay="600" data-aos-easing="ease-out-cubic" data-aos-anchor-placement="top-center">{props.data.title}</h1>
-                <p>{props.data.txt}</p>
+            <div data-aos="fade-left" data-aos-anchor-placement="top-center" className={styles.txtContent}>
+                <h1 data-aos="flip-left" data-aos-delay="600" data-aos-easing="ease-out-cubic" data-aos-anchor-placement="top-center">{data.title}</h1>
+                {data.txt.map((txt, index) => (
+                    <p className={styles.txt} key={index}>{txt}</p>
+                ))}
             </div>
         </div>
     )
+}
+
+LeftPoint.propTypes = {
+    data: PropTypes.object.isRequired
 }
 
 function RightPoint(props) {
+    const data = props.data
     return (
         <div className={`${styles.point} ${styles.rightPoint}`}>
-            <div data-aos-anchor-placement="top-center" data-aos="fade-right"  className={`${styles.txt} ${styles.rightTxt}`}>
-                <h1 data-aos="flip-right" data-aos-delay="1000" data-aos-anchor-placement="top-bottom">{props.data.title}</h1>
-                <p>{props.data.txt}</p> 
+            <div data-aos-anchor-placement="top-center" data-aos="fade-right"  className={`${styles.txtContent} ${styles.rightTxt}`}>
+                <h1 data-aos="flip-right" data-aos-delay="1000" data-aos-anchor-placement="top-bottom">{data.title}</h1>
+                {data.txt.map((txt, index) => (
+                    <p className={styles.txt} key={index}>{txt}</p>
+                ))}
             </div>
             <div data-aos="fade-left" data-aos-anchor-placement="top-center" className={`${styles.bannerPos} ${styles.bannerRightPos}`}>
-                <ChooseBanner setBannerId='banner02' pointList={props.data.imgList} btnPosRight={false} className={styles.bannerPos} />
+                <ChooseBanner setBannerId='banner02' pointList={data.imgList} btnPosRight={false} className={styles.bannerPos} />
             </div>
         </div>
     )
 }
 
+RightPoint.propTypes = {
+    data: PropTypes.object.isRequired
+}
+
 function PointList(props) {
+    const { bg, data } = props
     return (
-        <div style={{backgroundImage: `url(${props.bg})`}} className="bg-fit">
+        <div style={{backgroundImage: `url(${bg})`}} className="bg-fit">
             <div className={`container960 ${styles.pointList}`}>
-                {props.data.map((item ,index) => (
+                {data.map((item ,index) => (
                     <div data-aos="zoom-in-left" data-aos-delay={index * 300} key={index} className={styles.item}>
                         <ImgRotate item={item} />
                         <p data-aos="flip-right" data-aos-duration="800" data-aos-delay={index * 300 + 800} className={styles.imgTxt}>{item.title}</p>
@@ -70,7 +86,13 @@ function PointList(props) {
     )
 }
 
+PointList.propTypes = {
+    bg: PropTypes.string.isRequired,
+    data: PropTypes.array.isRequired
+}
+
 function BlackPoint(props) {
+    const data = props.data
     function fadePos(index) {
         if(index % 2 === 1) return "fade-left"
         return "fade-right"
@@ -78,7 +100,7 @@ function BlackPoint(props) {
 
     return (
         <div className={styles.blackPoint}>
-            {props.data.map((item, index) => (
+            {data.map((item, index) => (
                 <div data-aos={fadePos(index)} key={index} style={{backgroundImage: `url(${item.imgUrl})`}} className={`bg-fit ${styles.item}`}>
                     <div className={styles.blackHide}>
                         <p data-aos="flip-left" data-aos-delay="600">{item.title}</p>
@@ -89,10 +111,15 @@ function BlackPoint(props) {
     )
 }
 
+BlackPoint.propTypes = {
+    data: PropTypes.array.isRequired
+}
+
 function Footer(props) {
+    const data = props
     return (
         <div className={styles.footer}>
-            <p>華夏文明 薪火相傳 - {props.data.title}研學之旅</p>
+            <p>華夏文明 薪火相傳 - {data.title}研學之旅</p>
         </div>  
     )
 }

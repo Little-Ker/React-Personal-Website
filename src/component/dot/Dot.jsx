@@ -1,3 +1,4 @@
+import React from "react"
 import styles from './dot.module.sass'
 
 function Dot() {
@@ -14,4 +15,4 @@ function Dot() {
 }
 
 
-export default Dot;
+export default Dot

@@ -15,7 +15,7 @@ function TypeNav() {
             }
             setTypeIndex(1)
         })
-    });
+    })
 
     return (
         <div className={styles.typeNav}>

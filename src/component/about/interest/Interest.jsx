@@ -3,9 +3,9 @@ import styles from './interest.module.sass'
 import clsx from 'clsx'
 
 import LuggageIcon from '@mui/icons-material/Luggage'
-import BrushIcon from '@mui/icons-material/Brush';
-import DirectionsWalkIcon from '@mui/icons-material/DirectionsWalk';
-import TvIcon from '@mui/icons-material/Tv';
+import BrushIcon from '@mui/icons-material/Brush'
+import DirectionsWalkIcon from '@mui/icons-material/DirectionsWalk'
+import TvIcon from '@mui/icons-material/Tv'
 
 function Interest() {
     const interestList = [

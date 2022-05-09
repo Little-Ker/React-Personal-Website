@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 
 export const fetchTravelData  = createAsyncThunk(
@@ -42,7 +42,7 @@ export const travelSlice = createSlice({
                 state.travelZhangjiajie = action.payload.zhangjiajie
         })
     }
-});
+})
 
 export const { addAsiaCount, initAsiaCount } = travelSlice.actions
 export default travelSlice.reducer
