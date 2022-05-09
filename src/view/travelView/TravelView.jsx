@@ -5,6 +5,16 @@ import {fetchTravelData} from '../../redux/travelSlice'
 import styles from './travelView.module.sass'
 import AddIcon from '@mui/icons-material/Add'
 
+function ShowFontFamily() {
+    return (
+        <div className={styles.showFontFamily}>
+            <p style={{fontFamily: "f01"}}>Test</p>
+            <p style={{fontFamily: "f02"}}>Test</p>
+        </div>
+    )
+    
+}
+
 function TravelView() {
     const dispatch = useDispatch()
     const travelBannerDate = useSelector(state => state.travelDate.travelBannerData) // <-- 拿取資料
@@ -19,6 +29,7 @@ function TravelView() {
 
     return (
         <div className={styles.bg}>
+            <ShowFontFamily />
             <div className={styles.travelList}>
                 {travelBannerDate.map((item, index) => (
                     <Link data-aos={fadePos(index)} data-aos-duration="1200" key={index} to={item.to} className={styles.point}>
