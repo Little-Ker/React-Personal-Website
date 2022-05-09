@@ -52,6 +52,7 @@
     ]
   },
   "devDependencies": {
-    "@redux-devtools/core": "^3.11.0"
+    "@redux-devtools/core": "^3.11.0",
+    "eslint": "^8.15.0"
   }
 }
