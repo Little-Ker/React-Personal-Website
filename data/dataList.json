@@ -8,18 +8,18 @@
     "familyData": [{
       "title": "兒時版 Gugi",
       "img": [
-        "/img/family/01.jpg", 
-        "/img/family/02.jpg", 
-        "/img/family/03.jpg", 
-        "/img/family/04.jpg"
+        "/React-Personal-Website/img/family/01.jpg", 
+        "/React-Personal-Website/img/family/02.jpg", 
+        "/React-Personal-Website/img/family/03.jpg", 
+        "/React-Personal-Website/img/family/04.jpg"
       ]
     },{
       "title": "壯大版 Gugi",
       "img": [
-        "/img/family/05.jpg", 
-        "/img/family/06.jpg", 
-        "/img/family/07.jpg", 
-        "/img/family/08.jpg"
+        "/React-Personal-Website/img/family/05.jpg", 
+        "/React-Personal-Website/img/family/06.jpg", 
+        "/React-Personal-Website/img/family/07.jpg", 
+        "/React-Personal-Website/img/family/08.jpg"
       ]
     }]
   },
@@ -32,22 +32,22 @@
     ],
     "asia": [
       {
-        "imgUrl": "/img/travel/asia/a0.jpg",
+        "imgUrl": "/React-Personal-Website/img/travel/asia/a0.jpg",
         "txt": [ "台中市霧峰區", "全台最美大學", "希臘羅馬式風格建築" ],
-        "nextImgUrl": "/img/travel/asia/a1.jpg"
+        "nextImgUrl": "/React-Personal-Website/img/travel/asia/a1.jpg"
       },
       {
-        "imgUrl": "/img/travel/asia/a1.jpg",
+        "imgUrl": "/React-Personal-Website/img/travel/asia/a1.jpg",
         "txt": [ "行政大樓暨圖書館", "圓頂建築", "亞大地標" ],
-        "nextImgUrl": "/img/travel/asia/a2.jpg"
+        "nextImgUrl": "/React-Personal-Website/img/travel/asia/a2.jpg"
       },
       {
-        "imgUrl": "/img/travel/asia/a2.jpg",
+        "imgUrl": "/React-Personal-Website/img/travel/asia/a2.jpg",
         "txt": [ "羅馬體育館", "拱門柱式建築結構", "拍婚紗首選" ],
         "nextImgUrl": "/img/travel/asia/a3.jpg"
       },
       {
-        "imgUrl": "/img/travel/asia/a3.jpg",
+        "imgUrl": "/React-Personal-Website/img/travel/asia/a3.jpg",
         "txt": [ "亞大都市傳說", "分手椅" ],
         "nextImgUrl": "/img/travel/asia/a0.jpg"
       }
@@ -55,42 +55,42 @@
     "ningxia": {
       "introduce": {
         "title": "寧夏",
-        "banner": "/img/travel/banner03.jpg",
-        "imgUrl":  "/img/travel/ningxia/n0.png",
+        "banner": "/React-Personal-Website/img/travel/banner03.jpg",
+        "imgUrl":  "/React-Personal-Website/img/travel/ningxia/n0.png",
         "content": "一般說起對寧夏的印象，大概就是回族、大漠以及駱駝吧，果不其然導遊也有說到：有些觀光客會問他們，是不是還是騎駱駝去上學？但其實除了滾滾黃沙，在黃河的孕育下，寧夏還有其他的面貌。"
       },
       "camel": [{
         "title": "鎮北堡西部影城",
-        "imgUrl": "/img/travel/ningxia/n1_1.jpg"
+        "imgUrl": "/React-Personal-Website/img/travel/ningxia/n1_1.jpg"
       },{
         "title": "拋綉球招親",
-        "imgUrl": "/img/travel/ningxia/n1_2.jpg"
+        "imgUrl": "/React-Personal-Website/img/travel/ningxia/n1_2.jpg"
       }],
       "movie": {
         "title01": "沙湖騎駱駝體驗",
-        "imgUrl01": "/img/travel/ningxia/n2_1.jpg",
+        "imgUrl01": "/React-Personal-Website/img/travel/ningxia/n2_1.jpg",
         "title02": "",
-        "imgUrl02": "/img/travel/ningxia/n2_2.jpg",
+        "imgUrl02": "/React-Personal-Website/img/travel/ningxia/n2_2.jpg",
         "title03": "",
-        "imgUrl03": "/img/travel/ningxia/n2_3.jpg"
+        "imgUrl03": "/React-Personal-Website/img/travel/ningxia/n2_3.jpg"
       },
       "yellowRiver": {
         "title01": "黃河壇",
-        "imgUrl01": "/img/travel/ningxia/n3_1.jpg",
+        "imgUrl01": "/React-Personal-Website/img/travel/ningxia/n3_1.jpg",
         "title02": "黃河樓",
-        "imgUrl02": "/img/travel/ningxia/n3_2.jpg",
+        "imgUrl02": "/React-Personal-Website/img/travel/ningxia/n3_2.jpg",
         "title03": "黃河宮",
-        "imgUrl03": "/img/travel/ningxia/n3_3.jpg"
+        "imgUrl03": "/React-Personal-Website/img/travel/ningxia/n3_3.jpg"
       },
       "mountain": [{
         "title": "須彌山石窟",
-        "imgUrl": "/img/travel/ningxia/n4_1.jpg"
+        "imgUrl": "/React-Personal-Website/img/travel/ningxia/n4_1.jpg"
       },{
         "title": "古絲綢之路",
-        "imgUrl": "/img/travel/ningxia/n4_2.jpg"
+        "imgUrl": "/React-Personal-Website/img/travel/ningxia/n4_2.jpg"
       },{
         "title": "百年大佛",
-        "imgUrl": "/img/travel/ningxia/n4_3.jpg"
+        "imgUrl": "/React-Personal-Website/img/travel/ningxia/n4_3.jpg"
       }]
     },
     "sian": {
@@ -104,8 +104,8 @@
           "兵馬俑 1 號坑，栩栩如生的陪葬軍隊。"
         ],
         "imgList": [
-          "/img/travel/sian/s1_1.jpg",
-          "/img/travel/sian/s1_2.jpg"
+          "/React-Personal-Website/img/travel/sian/s1_1.jpg",
+          "/React-Personal-Website/img/travel/sian/s1_2.jpg"
         ]
       },
       "hotSpring": {
@@ -116,30 +116,30 @@
           "大型實景歷史舞劇 - 長恨歌。"
         ],
         "imgList": [
-          "/img/travel/sian/s2_1.jpg",
-          "/img/travel/sian/s2_2.jpg",
-          "/img/travel/sian/s2_3.jpg"
+          "/React-Personal-Website/img/travel/sian/s2_1.jpg",
+          "/React-Personal-Website/img/travel/sian/s2_2.jpg",
+          "/React-Personal-Website/img/travel/sian/s2_3.jpg"
         ]
       },
       "park": [{
         "title": "漢城湖遺址公園",
-        "imgUrl": "/img/travel/sian/s3_1.jpg"
+        "imgUrl": "/React-Personal-Website/img/travel/sian/s3_1.jpg"
       },{
         "title": "漢服體驗",
-        "imgUrl": "/img/travel/sian/s3_2.jpg"
+        "imgUrl": "/React-Personal-Website/img/travel/sian/s3_2.jpg"
       }],
       "eat": [{
         "title": "肉夾饃、羊肉泡饃",
-        "imgUrl": "/img/travel/sian/s4_1_1.jpg",
-        "imgUrlHover": "/img/travel/sian/s4_1_2.jpg"
+        "imgUrl": "/React-Personal-Website/img/travel/sian/s4_1_1.jpg",
+        "imgUrlHover": "/React-Personal-Website/img/travel/sian/s4_1_2.jpg"
       },{
         "title": "ㄅㄧㄤˋㄅㄧㄤˋ麵",
-        "imgUrl": "/img/travel/sian/s4_2_1.jpg",
-        "imgUrlHover": "/img/travel/sian/s4_2_2.jpg"
+        "imgUrl": "/React-Personal-Website/img/travel/sian/s4_2_1.jpg",
+        "imgUrlHover": "/React-Personal-Website/img/travel/sian/s4_2_2.jpg"
       },{
         "title": "紅柳烤肉",
-        "imgUrl": "/img/travel/sian/s4_3_1.jpg",
-        "imgUrlHover": "/img/travel/sian/s4_3_2.jpg"
+        "imgUrl": "/React-Personal-Website/img/travel/sian/s4_3_1.jpg",
+        "imgUrlHover": "/React-Personal-Website/img/travel/sian/s4_3_2.jpg"
       }]
     },
     "zhangjiajie": {
@@ -148,33 +148,33 @@
       },
       "photo": [{
         "title": "天門洞",
-        "imgUrl": "/img/travel/zhangjiajie/photo01.jpg",
+        "imgUrl": "/React-Personal-Website/img/travel/zhangjiajie/photo01.jpg",
         "txt": "世界上最高海拔的天然穿山溶洞。有 999 階天梯！！但也可以選擇搭乘多段式手扶梯。"
       },{
         "title": "百龍天梯",
-        "imgUrl": "/img/travel/zhangjiajie/photo02.jpg",
+        "imgUrl": "/React-Personal-Website/img/travel/zhangjiajie/photo02.jpg",
         "txt": "世界第一梯，世界最高、速度最快、載重最大的電梯。"
       },{
         "title": "張家界大峽谷",
-      "imgUrl": "/img/travel/zhangjiajie/photo03.jpg",
+      "imgUrl": "/React-Personal-Website/img/travel/zhangjiajie/photo03.jpg",
         "txt": "天然大峽谷風光，獨特峰林地貌，山峰林立、猶如仙境，是電影《阿凡達》的取景地。"
       }],
       "circleImg": [{
         "title": "天門山索道",
-        "imgUrl": "/img/travel/zhangjiajie/circleImg01.png"
+        "imgUrl": "/React-Personal-Website/img/travel/zhangjiajie/circleImg01.png"
       },{
         "title": "玻璃棧道",
-        "imgUrl": "/img/travel/zhangjiajie/circleImg02.png"
+        "imgUrl": "/React-Personal-Website/img/travel/zhangjiajie/circleImg02.png"
       },{
         "title": "玻璃橋",
-        "imgUrl": "/img/travel/zhangjiajie/circleImg03.png"
+        "imgUrl": "/React-Personal-Website/img/travel/zhangjiajie/circleImg03.png"
       }],
       "blackImg": [{
         "title": "鳳凰古城",
-        "imgUrl": "/img/travel/zhangjiajie/photo04.jpg"
+        "imgUrl": "/React-Personal-Website/img/travel/zhangjiajie/photo04.jpg"
       },{
         "title": "乘船遊江",
-        "imgUrl": "/img/travel/zhangjiajie/photo05.jpg"
+        "imgUrl": "/React-Personal-Website/img/travel/zhangjiajie/photo05.jpg"
       }]
     }
   }
