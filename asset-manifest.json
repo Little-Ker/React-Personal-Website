@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-Personal-Website/static/css/main.f70761a1.css",
-    "main.js": "/React-Personal-Website/static/js/main.703edd24.js",
+    "main.js": "/React-Personal-Website/static/js/main.d1d24ca4.js",
     "static/js/787.9d17a612.chunk.js": "/React-Personal-Website/static/js/787.9d17a612.chunk.js",
     "static/media/wt024.ttf": "/React-Personal-Website/static/media/wt024.e5f9cd148e12ef060183.ttf",
     "static/media/KouzanBrushFontSousyo.ttf": "/React-Personal-Website/static/media/KouzanBrushFontSousyo.8ef0df3ba42c88aa3eaa.ttf",
@@ -25,11 +25,11 @@
     "static/media/tree.png": "/React-Personal-Website/static/media/tree.3658e7bf59d2f75b82da.png",
     "index.html": "/React-Personal-Website/index.html",
     "main.f70761a1.css.map": "/React-Personal-Website/static/css/main.f70761a1.css.map",
-    "main.703edd24.js.map": "/React-Personal-Website/static/js/main.703edd24.js.map",
+    "main.d1d24ca4.js.map": "/React-Personal-Website/static/js/main.d1d24ca4.js.map",
     "787.9d17a612.chunk.js.map": "/React-Personal-Website/static/js/787.9d17a612.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f70761a1.css",
-    "static/js/main.703edd24.js"
+    "static/js/main.d1d24ca4.js"
   ]
 }
