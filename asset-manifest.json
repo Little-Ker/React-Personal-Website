@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/React-Personal-Website/static/css/main.f70761a1.css",
+    "main.js": "/React-Personal-Website/static/js/main.703edd24.js",
+    "static/js/787.9d17a612.chunk.js": "/React-Personal-Website/static/js/787.9d17a612.chunk.js",
+    "static/media/wt024.ttf": "/React-Personal-Website/static/media/wt024.e5f9cd148e12ef060183.ttf",
+    "static/media/KouzanBrushFontSousyo.ttf": "/React-Personal-Website/static/media/KouzanBrushFontSousyo.8ef0df3ba42c88aa3eaa.ttf",
+    "static/media/logo.png": "/React-Personal-Website/static/media/logo.0f95c76e0eb44919123f.png",
+    "static/media/bg02.png": "/React-Personal-Website/static/media/bg02.c416e0629140996b448c.png",
+    "static/media/cloud02.png": "/React-Personal-Website/static/media/cloud02.0f16d54642c27af82f01.png",
+    "static/media/paper.png": "/React-Personal-Website/static/media/paper.2e09c555c82ef889d17a.png",
+    "static/media/cloud.png": "/React-Personal-Website/static/media/cloud.fed3423f7bc618e5d4b0.png",
+    "static/media/03.jpg": "/React-Personal-Website/static/media/03.de346a4e3d2f4df29f15.jpg",
+    "static/media/vivi.jpg": "/React-Personal-Website/static/media/vivi.a8a38bde735314271f2c.jpg",
+    "static/media/02.jpg": "/React-Personal-Website/static/media/02.b7663033e05eff0046a0.jpg",
+    "static/media/goal03.jpg": "/React-Personal-Website/static/media/goal03.5dcb01d167b43845e155.jpg",
+    "static/media/bg01.jpg": "/React-Personal-Website/static/media/bg01.a3b98637a02530a3cfe8.jpg",
+    "static/media/bg02.jpg": "/React-Personal-Website/static/media/bg02.cf73111ff6ed5f3afc6a.jpg",
+    "static/media/01.jpg": "/React-Personal-Website/static/media/01.dcc796bfdc1373228c5e.jpg",
+    "static/media/bg03.jpg": "/React-Personal-Website/static/media/bg03.d85f55a03a8498f674f3.jpg",
+    "static/media/circleTxtBg.png": "/React-Personal-Website/static/media/circleTxtBg.fe32833a79c1c7b105d7.png",
+    "static/media/tree02.png": "/React-Personal-Website/static/media/tree02.eb75eee0a6280d99f14f.png",
+    "static/media/goal01.jpg": "/React-Personal-Website/static/media/goal01.1ff7f85dbcfc2f21d3c1.jpg",
+    "static/media/goal02.jpg": "/React-Personal-Website/static/media/goal02.28fd11f8d150f9924afc.jpg",
+    "static/media/tree.png": "/React-Personal-Website/static/media/tree.3658e7bf59d2f75b82da.png",
+    "index.html": "/React-Personal-Website/index.html",
+    "main.f70761a1.css.map": "/React-Personal-Website/static/css/main.f70761a1.css.map",
+    "main.703edd24.js.map": "/React-Personal-Website/static/js/main.703edd24.js.map",
+    "787.9d17a612.chunk.js.map": "/React-Personal-Website/static/js/787.9d17a612.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f70761a1.css",
+    "static/js/main.703edd24.js"
+  ]
+}
