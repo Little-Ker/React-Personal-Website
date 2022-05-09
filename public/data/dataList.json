@@ -26,9 +26,9 @@
   "travelData": {
     "banner": [
       {"title": "亞洲大學", "to": "/travel/asia", "imgUrl": "/img/travel/banner01.jpg", "startDate": "2015 - 09", "overDate": "2019 - 06"},
-      {"title": "西安研學之旅", "to": "/travel/sian", "imgUrl": "/img/travel/banner02.jpg", "startDate": "2022 - 04 - 21", "overDate": "2022 - 04 - 21"},
+      {"title": "西安研學之旅", "to": "/travel/sian", "imgUrl": "/img/travel/banner02.jpg", "startDate": "2018 - 04 - 30", "overDate": "2018 - 05 - 04"},
       {"title": "寧夏研學之旅", "to": "/travel/ningxia", "imgUrl": "/img/travel/banner03.jpg", "startDate": "2019 - 05 - 11", "overDate": "2019 - 05 - 18"},
-      {"title": "張家界", "to": "/travel/zhangjiajie", "imgUrl": "/img/travel/banner04.jpg", "startDate": "2022 - 04 - 21", "overDate": "2022 - 04 - 21"}
+      {"title": "張家界", "to": "/travel/zhangjiajie", "imgUrl": "/img/travel/banner04.jpg", "startDate": "2019 - 07 - 21", "overDate": "2019 - 07 - 21"}
     ],
     "asia": [
       {
@@ -57,7 +57,7 @@
         "title": "寧夏",
         "banner": "/img/travel/banner03.jpg",
         "imgUrl":  "/img/travel/ningxia/n0.png",
-        "content": "一般說起我對寧夏的印象，大概就是回族、大漠以及駱駝吧，果不其然導遊也有說到：有些觀光客會問他們，是不是還是騎駱駝去上學？但在下了飛機、上了遊覽車，前往飯店的路上，這個錯誤的第一印象立刻被推翻掉，寧夏其實是個很現代化的城市。"
+        "content": "一般說起對寧夏的印象，大概就是回族、大漠以及駱駝吧，果不其然導遊也有說到：有些觀光客會問他們，是不是還是騎駱駝去上學？但其實除了滾滾黃沙，在黃河的孕育下，寧夏還有其他的面貌。"
       },
       "camel": [{
         "title": "鎮北堡西部影城",
@@ -99,7 +99,10 @@
       },
       "terracottaArm": {
         "title": "秦始皇陵",
-        "txt": "西安市為中國陝西的省會。西安，古稱長安，是中國歷史上建都時間最長的都城，有十三朝建都於此，與雅典、羅馬、開羅並稱為世界四大古都。",
+        "txt": [
+          "搭電瓶車繞行整個陵墓，總面積約10個籃球場大小。",
+          "兵馬俑 1 號坑，栩栩如生的陪葬軍隊。"
+        ],
         "imgList": [
           "/img/travel/sian/s1_1.jpg",
           "/img/travel/sian/s1_2.jpg"
@@ -107,7 +110,11 @@
       },
       "hotSpring": {
         "title": "華清池 長恨歌",
-        "txt": "西安市為中國陝西的省會。西安，古稱長安，是中國歷史上建都時間最長的都城，有十三朝建都於此，與雅典、羅馬、開羅並稱為世界四大古都。",
+        "txt": [
+          "唐代溫泉宮遺址，楊貴妃的泡湯處。",
+          "泳池大小的唐太宗專用御池。",
+          "大型實景歷史舞劇 - 長恨歌。"
+        ],
         "imgList": [
           "/img/travel/sian/s2_1.jpg",
           "/img/travel/sian/s2_2.jpg",
@@ -130,7 +137,7 @@
         "imgUrl": "/img/travel/sian/s4_2_1.jpg",
         "imgUrlHover": "/img/travel/sian/s4_2_2.jpg"
       },{
-        "title": "新疆紅柳烤肉",
+        "title": "紅柳烤肉",
         "imgUrl": "/img/travel/sian/s4_3_1.jpg",
         "imgUrlHover": "/img/travel/sian/s4_3_2.jpg"
       }]
@@ -142,32 +149,32 @@
       "photo": [{
         "title": "天門洞",
         "imgUrl": "/img/travel/zhangjiajie/photo01.jpg",
-        "txt": "0333張家界市，舊稱大庸，是中華人民共和國湖南省下轄的地級市。"
+        "txt": "世界上最高海拔的天然穿山溶洞。有 999 階天梯！！但也可以選擇搭乘多段式手扶梯。"
       },{
-        "title": "佰龍天梯",
+        "title": "百龍天梯",
         "imgUrl": "/img/travel/zhangjiajie/photo02.jpg",
-        "txt": "0222張家界市，舊稱大庸，是中華人民共和國湖南省下轄的地級市。"
+        "txt": "世界第一梯，世界最高、速度最快、載重最大的電梯。"
       },{
-        "title": "張家界",
-        "imgUrl": "/img/travel/zhangjiajie/photo01.jpg",
-        "txt": "0111張家界市，舊稱大庸，是中華人民共和國湖南省下轄的地級市。"
+        "title": "張家界大峽谷",
+      "imgUrl": "/img/travel/zhangjiajie/photo03.jpg",
+        "txt": "天然大峽谷風光，獨特峰林地貌，山峰林立、猶如仙境，是電影《阿凡達》的取景地。"
       }],
       "circleImg": [{
         "title": "天門山索道",
         "imgUrl": "/img/travel/zhangjiajie/circleImg01.png"
       },{
-        "title": "玻璃步道",
+        "title": "玻璃棧道",
         "imgUrl": "/img/travel/zhangjiajie/circleImg02.png"
       },{
-        "title": "天門洞",
+        "title": "玻璃橋",
         "imgUrl": "/img/travel/zhangjiajie/circleImg03.png"
       }],
       "blackImg": [{
         "title": "鳳凰古城",
-        "imgUrl": "/img/travel/zhangjiajie/photo01.jpg"
+        "imgUrl": "/img/travel/zhangjiajie/photo04.jpg"
       },{
-        "title": "遊船",
-        "imgUrl": "/img/travel/zhangjiajie/photo02.jpg"
+        "title": "乘船遊江",
+        "imgUrl": "/img/travel/zhangjiajie/photo05.jpg"
       }]
     }
   }
