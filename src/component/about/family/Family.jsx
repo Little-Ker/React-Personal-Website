@@ -84,6 +84,7 @@ function ImageItem(props) {
             alt=""
             loading="lazy"
             onClick={handleClickOpen}
+            className={styles.imageListItem}
           />
           <Dialog
             open={open}
