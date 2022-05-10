@@ -8,14 +8,14 @@ function ChooseBanner(props) {
     useEffect(() => {
         const imgUrl = props.pointList[chooseIndex]
 
-        document.querySelector(`#${props.setBannerId}`).style.backgroundImage = `url(${imgUrl})`
+        document.querySelector(`#${props.setBannerId}`).style.backgroundImage = `url(${process.env.REACT_APP_BASE_URL}${imgUrl})`
     }, [chooseIndex])
 
     return(
-        <div id={props.setBannerId} style={{backgroundImage: `url(${props.pointList[0]})`}} className={`changeImg ${styles.poitImg}`}>
+        <div id={props.setBannerId} style={{backgroundImage: `url(${process.env.REACT_APP_BASE_URL}${props.pointList[0]})`}} className={`changeImg ${styles.poitImg}`}>
             <div className={clsx(styles.btnList, (props.btnPosRight && styles.btnPosRight)) }>
                 {props.pointList.map((imgUrl, index) => (
-                    <div key={index} onClick={() => setChooseIndex(index)} style={{backgroundImage: `url(${imgUrl})`}} className={styles.btn}></div>
+                    <div key={index} onClick={() => setChooseIndex(index)} style={{backgroundImage: `url(${process.env.REACT_APP_BASE_URL}${imgUrl})`}} className={styles.btn}></div>
                 ))}
             </div>
         </div>

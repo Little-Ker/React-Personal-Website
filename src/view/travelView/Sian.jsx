@@ -101,7 +101,7 @@ function BlackPoint(props) {
     return (
         <div className={styles.blackPoint}>
             {data.map((item, index) => (
-                <div data-aos={fadePos(index)} key={index} style={{backgroundImage: `url(${item.imgUrl})`}} className={`bg-fit ${styles.item}`}>
+                <div data-aos={fadePos(index)} key={index} style={{backgroundImage: `url(${process.env.REACT_APP_BASE_URL}${item.imgUrl})`}} className={`bg-fit ${styles.item}`}>
                     <div className={styles.blackHide}>
                         <p data-aos="flip-left" data-aos-delay="600">{item.title}</p>
                     </div>

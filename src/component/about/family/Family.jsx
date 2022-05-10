@@ -117,7 +117,7 @@ function QuiltedImageList(props) {
       className={styles.imageList}
     >
       {data.map((item, index) => (
-        <ImageItem key={index} imgUrl={item} size={imgSize[index]} />
+        <ImageItem key={index} imgUrl={`${process.env.REACT_APP_BASE_URL}${item}`} size={imgSize[index]} />
       ))}
     </ImageList>
   )

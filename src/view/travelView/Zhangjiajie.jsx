@@ -45,7 +45,7 @@ function CirclePoint(props) {
             {data.map((item, index) => (
                 <div data-aos="zoom-in-left" data-aos-delay={index * 300} key={index} className={styles.point}>
                     <div className={styles.cirlceImg}>
-                        <img className="img-fit" src={item.imgUrl} alt="" />
+                        <img className="img-fit" src={`${process.env.REACT_APP_BASE_URL}${item.imgUrl}`} alt="" />
                     </div>
                     <img data-aos="flip-right" data-aos-duration="800" data-aos-delay={index * 300} className={styles.cirlceTxtBg} src={txtBg} alt="" />
                     <div data-aos="flip-right" data-aos-duration="800" data-aos-delay={index * 300} className={styles.title}>{item.title}</div>
@@ -69,7 +69,7 @@ function BlackPoint(props) {
     return (
         <div className={styles.blackPoint}>
             {data.map((item, index) => (
-                <div data-aos={fadePos(index)} key={index} style={{backgroundImage: `url(${item.imgUrl})`}} className={`bg-fit ${styles.item}`}>
+                <div data-aos={fadePos(index)} key={index} style={{backgroundImage: `url(${process.env.REACT_APP_BASE_URL}${item.imgUrl})`}} className={`bg-fit ${styles.item}`}>
                     <div className={styles.blackHide}>
                         <p data-aos="flip-left" data-aos-delay="600">{item.title}</p>
                     </div>

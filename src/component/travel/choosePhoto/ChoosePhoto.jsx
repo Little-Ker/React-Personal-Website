@@ -41,7 +41,7 @@ function ChoosePhoto(props) {
                 {photoPosList.map((pos, index) => (
                     <div key={index} data-aos="zoom-out-up" data-aos-anchor-placement="top-center" data-aos-delay={500 * index}>
                         <div onClick={() => setPhotoIndex(index)} style={photoPosStyle(pos.left, pos.top, pos.rotate)} className={clsx(styles.photoBg, styles[`photo0${[index]}`], photoIndex === index && styles.active)}>
-                            <img src={pList[index].imgUrl} className="img-fit" alt="圖片" />
+                            <img src={`${process.env.REACT_APP_BASE_URL}${pList[index].imgUrl}`} className="img-fit" alt="圖片" />
                             <p className={styles.photoTxt}>{pList[index].title}</p>
                         </div>
                     </div>

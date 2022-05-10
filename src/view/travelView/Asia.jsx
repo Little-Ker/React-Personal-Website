@@ -60,7 +60,7 @@ function PhotoSwiper() {
                 className={`swiper-no-swiping ${styles.swiperBg}`}
             >
                 {travelAsiaDate.map((val, index) => (
-                    <SwiperSlide key={index} style={{backgroundImage: `url(${val.imgUrl}`}} className={styles.swiperSlide}></SwiperSlide>
+                    <SwiperSlide key={index} style={{backgroundImage: `url(${process.env.REACT_APP_BASE_URL}${val.imgUrl}`}} className={styles.swiperSlide}></SwiperSlide>
                 ))}
             </Swiper>
 
@@ -86,7 +86,7 @@ function PhotoSwiper() {
 
             <div className={styles.nextBtn} onClick={() => slideTo()}>
                 {travelAsiaDate.map((item, index) => (
-                    <img src={item.nextImgUrl} key={index} className={clsx(styles.btnImg, (clickAsiaCount === index && styles.showBtn))} alt="" />
+                    <img src={`${process.env.REACT_APP_BASE_URL}${item.nextImgUrl}`} key={index} className={clsx(styles.btnImg, (clickAsiaCount === index && styles.showBtn))} alt="" />
                 ))}
                 <div className={styles.nextIcon}></div>
             </div>

@@ -4,7 +4,7 @@ import axios from 'axios'
 export const fetchAboutData  = createAsyncThunk(
     'about/fetchTravelData',
     async () => {
-      const response = await axios.get('/data/dataList.json')
+      const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/data/dataList.json`)
       return response.data.aboutData
     }
 )

@@ -33,7 +33,7 @@ function TravelView() {
             <div className={styles.travelList}>
                 {travelBannerDate.map((item, index) => (
                     <Link data-aos={fadePos(index)} data-aos-duration="1200" key={index} to={item.to} className={styles.point}>
-                        <img className="img-fit" alt={item.title} src={item.imgUrl}></img>
+                        <img className="img-fit" alt={item.title} src={`${process.env.REACT_APP_BASE_URL}${item.imgUrl}`}></img>
                         <div className={styles.blackHide}>
                             <div data-aos="fade-up" data-aos-delay="1200" data-aos-duration="800" className={styles.title}>{item.title}</div>
                             <div className={styles.txtBox}>

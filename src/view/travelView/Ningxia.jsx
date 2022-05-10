@@ -22,7 +22,7 @@ function BlackPoint(props) {
     return (
         <div className={styles.mountain}>
             {props.data.map((item, index) => (
-                <div key={index} style={{backgroundImage: `url(${item.imgUrl})`}} className={styles.mountainImg}>
+                <div key={index} style={{backgroundImage: `url(${process.env.REACT_APP_BASE_URL}${item.imgUrl})`}} className={styles.mountainImg}>
                     <div className={styles.blackHide}>
                         <p data-aos="flip-left">{item.title}</p>
                     </div>
@@ -43,15 +43,15 @@ function Point(props) {
             <div className={styles.list}>
                 <div data-aos="fade-left" className={styles.item} style={imgSize(size01)}>
                     <p>{data.title01}</p>
-                    <img className="img-fit" src={data.imgUrl01} alt="" />
+                    <img className="img-fit" src={`${process.env.REACT_APP_BASE_URL}${data.imgUrl01}`} alt="" />
                 </div>
                 <div data-aos="fade-left" data-aos-delay="300" className={styles.item} style={imgSize(size02)}>
                     <p>{data.title02}</p>
-                    <img className="img-fit" src={data.imgUrl02} alt="" />
+                    <img className="img-fit" src={`${process.env.REACT_APP_BASE_URL}${data.imgUrl02}`} alt="" />
                 </div>
                 <div data-aos="fade-left" data-aos-delay="600" className={styles.item} style={imgSize(size03)}>
                     <p>{data.title03}</p>
-                    <img className="img-fit" src={data.imgUrl03} alt="" />
+                    <img className="img-fit" src={`${process.env.REACT_APP_BASE_URL}${data.imgUrl03}`} alt="" />
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@ function Introduce(props) {
     return (
         <div className={`container1280 ${styles.introduce}`}>
             <img src={paper} className={styles.paper} alt="" />
-            <img data-aos="fade-right" data-aos-anchor-placement="center-center" src={data.imgUrl} alt="圖片" className={`img-fit ${styles.introduceImg}`} />
+            <img data-aos="fade-right" data-aos-anchor-placement="center-center" src={`${process.env.REACT_APP_BASE_URL}${data.imgUrl}`} alt="圖片" className={`img-fit ${styles.introduceImg}`} />
             <p data-aos="fade-left" data-aos-anchor-placement="center-center" className={styles.introduceTxt}>{data.content}</p>
         </div>  
     )
@@ -89,7 +89,7 @@ function Banner(props) {
                 <br></br>
                 <span>{data.title}文化</span>
             </p>
-            <div style={{backgroundImage: `url(${data.banner})`}} className={styles.bannerImg}></div>
+            <div style={{backgroundImage: `url(${process.env.REACT_APP_BASE_URL}${data.banner})`}} className={styles.bannerImg}></div>
         </div>
     )
 }
