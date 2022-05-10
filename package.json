@@ -1,5 +1,6 @@
 {
   "name": "react-personal-website",
+  "homepage": "https://little-ker.github.io/React-Personal-Website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,6 +16,7 @@
     "aos": "^2.3.4",
     "axios": "^0.26.1",
     "clsx": "^1.1.1",
+    "gh-pages": "^3.2.3",
     "prop-types": "^15.8.1",
     "query-string": "^7.1.1",
     "react": "^18.0.0",
@@ -28,6 +30,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
