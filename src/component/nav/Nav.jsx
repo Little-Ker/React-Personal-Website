@@ -22,7 +22,7 @@ const NavList = () => {
   ]
 
   let location = useLocation().pathname.split('/')[1]
-  if(location === '') location = 'about'
+  if(location === '' || location === 'React-Personal-Website') location = 'about'
 
   const moveTop = () => {
     window.scrollTo(0, 0)
