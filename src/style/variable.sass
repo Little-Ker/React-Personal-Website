@@ -12,7 +12,19 @@ $orange-bg: #EFD6C2
 $yellow-bg: #EEDFC2
 $main-pink: #DE6B72
 
+// 裝置大小
+$mobile-size: 576px
+$s-mobile-size: 375px
+
 =set-flex($horizontal, $vertical)
   display: flex
   justify-content: $horizontal
   align-items: $vertical
+
+= mobile
+  @media only screen and (max-width: $mobile-size)
+    @content
+
+= s_mobile
+  @media only screen and (max-width: $s-mobile-size)
+    @content
