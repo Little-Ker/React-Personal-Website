@@ -6,38 +6,59 @@
     position: fixed
     flex-direction: column
     +variable.set-flex(center, center)
+    z-index: 1
+    +variable.mobile
+        width: 100%
+        top: 0
+        padding: 20px 0 30px 0
+        background-color: rgb(240 233 227 / 90%)
     .title
         margin: 80px 0
         writing-mode: vertical-lr
+        +variable.mobile
+            margin: 0
+            writing-mode: horizontal-tb
         h1
             color: variable.$main-pink
             font-size: 36px
+            +variable.mobile
+                font-size: 30px
         p
             color: variable.$main-black
             font-size: 20px
             opacity: .9
             margin-left: 3px
             margin-top: 32px
-            font-family: Verdana,Geneva,sans-serif
-    .type
-        font-size: 24px
-        position: relative
-        font-weight: 700
-        color: variable.$main-black
-        margin-bottom: 25px
-        opacity: .3
-        transition: .3s all
-        letter-spacing: 3px
-        &::before
-            content: ''
-            width: 100%
-            height: 5px
-            background-color: variable.$main-pink
-            position: absolute
-            opacity: 0
-            bottom: -7px
+            font-family: Verdana, Geneva, sans-serif
+            +variable.mobile
+                margin-top: 0
+                font-size: 18px
+    .typeNavList
+        +variable.mobile
+            display: flex
+            margin-top: 20px
+        .type
+            font-size: 24px
+            position: relative
+            font-weight: 700
+            color: variable.$main-black
+            margin-bottom: 25px
+            opacity: .3
             transition: .3s all
-        &.active
-            opacity: 1
+            letter-spacing: 3px
+            +variable.mobile
+                font-size: 20px
+                margin: 0 20px
             &::before
+                content: ''
+                width: 100%
+                height: 5px
+                background-color: variable.$main-pink
+                position: absolute
+                opacity: 0
+                bottom: -7px
+                transition: .3s all
+            &.active
                 opacity: 1
+                &::before
+                    opacity: 1

@@ -3,9 +3,12 @@
 
 .yearLine
     width: 64px
+    +variable.mobile
+        width: 44px
     .yearDot
         background-color: variable.$main-pink
         position: relative
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
         +variable.set-flex(center, center)
         &:nth-child(1), &:nth-child(2)
             height: 300px
@@ -28,3 +31,5 @@
             color: #fff
             letter-spacing: 5px
             transform: rotate(90deg)
+            +variable.mobile
+                font-size: 53px

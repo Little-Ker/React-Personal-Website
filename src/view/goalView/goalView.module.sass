@@ -5,6 +5,9 @@
     height: 100vh
     background-color: variable.$main-bg
     +main.bg
+    +variable.mobile
+        width: 100%
+        margin-left: 0
     .goal
         position: relative
         width: 100%
@@ -17,12 +20,18 @@
             align-self: flex-start
             margin-bottom: 60px
             text-align: left
+            +variable.mobile
+                margin-bottom: 15%
             h1
                 color: variable.$main-pink
                 font-size: 36px
+                +variable.mobile
+                    font-size: 30px
             p
                 color: variable.$main-black
                 font-size: 20px
                 opacity: .9
                 margin-left: 3px
                 font-family: Verdana,Geneva,sans-serif
+                +variable.mobile
+                    font-size: 18px
