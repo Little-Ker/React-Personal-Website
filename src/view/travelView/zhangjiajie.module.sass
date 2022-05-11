@@ -2,10 +2,7 @@
 @use '../../style/main' as main
 
 .zhangjiajie
-    width: calc(100% - 80px)
-    margin-left: 80px
-    overflow: hidden
-    font-family: "Poppins", sans-serif
+    +main.bg
     .banner
         width: 100%
         background-attachment: fixed
@@ -59,29 +56,3 @@
                 letter-spacing: 1px
                 font-weight: 700
                 color: #252f33
-    .blackPoint
-        position: relative
-        height: 350px
-        margin-top: -50px
-        display: flex
-        .item
-            width: 50%
-            .blackHide
-                width: 100%
-                height: 100%
-                background-color: #4e6a808f
-                color: #fff
-                font-weight: 700
-                font-size: 20px
-                letter-spacing: 2px
-                +variable.set-flex(center, center)
-                transition: .3s all
-            &:hover .blackHide
-                opacity: 0
-    .footer
-        +variable.set-flex(flex-end, center)
-        background-color: #222e36
-        padding: 10px 30px
-        color: #ccc
-        font-size: 14px
-        letter-spacing: 1px

@@ -1,0 +1,27 @@
+@use '../../style/variable' as variable
+@use '../../style/main' as main
+    
+.bgCircle
+        position: fixed
+        left: 0
+        width: 100%
+        height: 100vh
+        .circleP
+            +main.bg-circle(variable.$pink-bg, 350px, -30px, 30px)
+        .circleY
+            +main.bg-circle(variable.$yellow-bg, 800px, 10%, 67%)
+        .circleO
+            +main.bg-circle(variable.$orange-bg, 1000px, 50%, -45%)
+        .circleP, .circleY, .circleO
+            animation: flyAnim 8s linear
+            animation-fill-mode: forwards
+            animation-iteration-count: infinite
+            opacity: .7
+
+@keyframes flyAnim 
+    0%
+        transform: translateY(0)
+    50%
+        transform: translateY(40px)
+    100%
+        transform: translateY(0)

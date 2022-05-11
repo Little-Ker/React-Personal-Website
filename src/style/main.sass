@@ -1,11 +1,10 @@
 @use './variable' as variable
 
-.bg
-    background-color: variable.$main-bg
-    overflow: hidden
-    position: relative
+=bg
     width: calc(100% - 80px)
     margin-left: 80px
+    overflow: hidden
+    font-family: "Poppins", sans-serif
 
 =bg-circle($color, $size, $posX, $posY)
     position: absolute

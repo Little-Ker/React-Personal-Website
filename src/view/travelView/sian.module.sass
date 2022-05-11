@@ -2,11 +2,8 @@
 @use '../../style/main' as main
     
 .sian
-    width: calc(100% - 80px)
-    margin-left: 80px
-    font-family: "Poppins", sans-serif
-    overflow: hidden
     position: relative
+    +main.bg
     .bird
         position: absolute
         width: 200px
@@ -89,29 +86,3 @@
                 &::before
                     left: 5px
                     top: -10px
-    .blackPoint
-        margin-top: 160px
-        height: 370px
-        display: flex
-        .item
-            width: 50%
-            .blackHide
-                width: 100%
-                height: 100%
-                background-color: #6f6f7e9f
-                color: #fff
-                font-weight: 700
-                font-size: 20px
-                letter-spacing: 2px
-                +variable.set-flex(center, center)
-                transition: .3s all
-            &:hover
-                .blackHide
-                    opacity: 0
-    .footer
-        +variable.set-flex(flex-end, center)
-        background-color: #505057
-        padding: 10px 30px
-        color: #ccc
-        font-size: 14px
-        letter-spacing: 1px

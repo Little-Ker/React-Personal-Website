@@ -13,6 +13,8 @@ import txtBg from '../../assets/image/zhangjiajie/circleTxtBg.png'
 
 import ChoosePhoto from '../../component/travel/choosePhoto/ChoosePhoto'
 import Cloud from '../../component/travel/cloud/Cloud'
+import BlackPoint from "../../component/travel/blackPoint/BlackPoint"
+import Footer from "../../component/travel/footer/Footer"
 
 import AOS from 'aos'
 import "aos/dist/aos.css"
@@ -59,30 +61,6 @@ CirclePoint.propTypes = {
     data: PropTypes.array.isRequired
 }
 
-function BlackPoint(props) {
-    const data = props.data
-    function fadePos(index) {
-        if(index % 2 === 1) return "fade-left"
-        return "fade-right"
-    }
-
-    return (
-        <div className={styles.blackPoint}>
-            {data.map((item, index) => (
-                <div data-aos={fadePos(index)} key={index} style={{backgroundImage: `url(${process.env.REACT_APP_BASE_URL}${item.imgUrl})`}} className={`bg-fit ${styles.item}`}>
-                    <div className={styles.blackHide}>
-                        <p data-aos="flip-left" data-aos-delay="600">{item.title}</p>
-                    </div>
-                </div>
-            ))}
-        </div>
-    )
-}
-
-BlackPoint.propTypes = {
-    data: PropTypes.array.isRequired
-}
-
 function Banner(props) {
     const data = props.data
     return (
@@ -96,14 +74,6 @@ function Banner(props) {
 
 Banner.propTypes = {
     data: PropTypes.array.isRequired
-}
-
-function Footer() {
-    return (
-        <div className={styles.footer}>
-            <p>張家界之旅</p>
-        </div>  
-    )
 }
 
 function Zhangjiajie() {
@@ -122,8 +92,8 @@ function Zhangjiajie() {
             <Banner data={travelZhangjiajieData.photo} />
             <CirclePoint data={travelZhangjiajieData.circleImg} />
             <CirclePointBg />
-            <BlackPoint data={travelZhangjiajieData.blackImg} />
-            <Footer />
+            <BlackPoint data={travelZhangjiajieData.blackImg} bgColor="#4e6a808f" marginTopNum={-50} />
+            <Footer txt="張家界之旅" bgColor="#222e36" />
         </div>
     )
 }

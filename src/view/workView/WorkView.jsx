@@ -8,6 +8,7 @@ import EditRoadOutlinedIcon from '@mui/icons-material/EditRoadOutlined'
 
 import TypeNav from '../../component/work/typeNav/TypeNav'
 import YearLine from '../../component/work/yearLine/YearLine'
+import BgCircle from "../../component/bgCircle/BgCircle"
 
 import AOS from 'aos'
 import "aos/dist/aos.css"
@@ -43,16 +44,6 @@ function Work() {
                 </div>
             ))}
         </div>
-    )
-}
-
-function BgCircle() {
-    return (
-      <div className={styles.bgCircle}>
-          <div className={styles.circleY}></div>
-          <div className={styles.circleP}></div>
-          <div className={styles.circleO}></div>
-      </div>
     )
 }
 

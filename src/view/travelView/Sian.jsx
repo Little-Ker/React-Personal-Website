@@ -17,6 +17,8 @@ import tree02 from '../../assets/image/sian/tree02.png'
 
 import ImgRotate from '../../component/travel/imgRotate/ImgRotate'
 import ChooseBanner from "../../component/travel/chooseBanner/ChooseBanner"
+import BlackPoint from "../../component/travel/blackPoint/BlackPoint"
+import Footer from "../../component/travel/footer/Footer"
 
 function Title() {
     return (
@@ -91,39 +93,6 @@ PointList.propTypes = {
     data: PropTypes.array.isRequired
 }
 
-function BlackPoint(props) {
-    const data = props.data
-    function fadePos(index) {
-        if(index % 2 === 1) return "fade-left"
-        return "fade-right"
-    }
-
-    return (
-        <div className={styles.blackPoint}>
-            {data.map((item, index) => (
-                <div data-aos={fadePos(index)} key={index} style={{backgroundImage: `url(${process.env.REACT_APP_BASE_URL}${item.imgUrl})`}} className={`bg-fit ${styles.item}`}>
-                    <div className={styles.blackHide}>
-                        <p data-aos="flip-left" data-aos-delay="600">{item.title}</p>
-                    </div>
-                </div>
-            ))}
-        </div>
-    )
-}
-
-BlackPoint.propTypes = {
-    data: PropTypes.array.isRequired
-}
-
-function Footer(props) {
-    const data = props
-    return (
-        <div className={styles.footer}>
-            <p>華夏文明 薪火相傳 - {data.title}研學之旅</p>
-        </div>  
-    )
-}
-
 function Bg() {
     return (
         <div>
@@ -158,9 +127,9 @@ function Sian() {
                 <LeftPoint data={travelSianData.terracottaArm} />
             </div>  
             <RightPoint data={travelSianData.hotSpring} />
-            <BlackPoint data={travelSianData.park} />
+            <BlackPoint data={travelSianData.park} bgColor="#6f6f7e9f" marginTopNum={160} className={styles.blackPoint} />
             <PointList data={travelSianData.eat} bg={bg03} />
-            <Footer data={travelSianData.introduce} />
+            <Footer txt={`華夏文明 薪火相傳 - ${travelSianData.introduce.title}研學之旅`} bgColor="#505057" />
         </div>
     )
 }

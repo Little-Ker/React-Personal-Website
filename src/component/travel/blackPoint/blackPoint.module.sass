@@ -1,0 +1,20 @@
+@use '../../../style/variable' as variable
+@use '../../../style/main' as main
+    
+.blackPoint
+    position: relative
+    height: 400px
+    display: flex
+    .item
+        width: 50%
+        .blackHide
+            width: 100%
+            height: 100%
+            color: #fff
+            font-weight: 700
+            font-size: 20px
+            letter-spacing: 2px
+            +variable.set-flex(center, center)
+            transition: .3s all
+        &:hover .blackHide
+            opacity: 0

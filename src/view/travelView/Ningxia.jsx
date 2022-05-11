@@ -8,6 +8,9 @@ import {fetchTravelData} from '../../redux/travelSlice'
 import AOS from 'aos'
 import "aos/dist/aos.css"
 
+import BlackPoint from "../../component/travel/blackPoint/BlackPoint"
+import Footer from "../../component/travel/footer/Footer"
+
 import bg01 from '../../assets/image/ningxia/bg01.jpg'
 import bg02 from '../../assets/image/ningxia/bg02.jpg'
 import paper from '../../assets/image/ningxia/paper.png'
@@ -16,24 +19,6 @@ const imgSize = (size) => {
     return {
         width: `${size}%`
     }
-}
-
-function BlackPoint(props) {
-    return (
-        <div className={styles.mountain}>
-            {props.data.map((item, index) => (
-                <div key={index} style={{backgroundImage: `url(${process.env.REACT_APP_BASE_URL}${item.imgUrl})`}} className={styles.mountainImg}>
-                    <div className={styles.blackHide}>
-                        <p data-aos="flip-left">{item.title}</p>
-                    </div>
-                </div>
-            ))}
-        </div>
-    )
-}
-
-BlackPoint.propTypes = {
-    data: PropTypes.array.isRequired
 }
 
 function Point(props) {
@@ -98,15 +83,6 @@ Banner.propTypes = {
     data: PropTypes.object.isRequired
 }
 
-function Footer(props) {
-    const data = props
-    return (
-        <div className={styles.footer}>
-            <p>華夏文明 薪火相傳 - {data.title}研學之旅</p>
-        </div>  
-    )
-}
-
 function Ningxia() {
     const dispatch = useDispatch()
     useEffect(() => {
@@ -123,13 +99,13 @@ function Ningxia() {
         <div style={{backgroundImage: `url(${bg01})`}} className={`${styles.ningxia}`}>
             <Banner data={travelNingxiaData.introduce} />
             <Introduce data={travelNingxiaData.introduce} />
-            <BlackPoint data={travelNingxiaData.camel} />
+            <BlackPoint data={travelNingxiaData.camel} bgColor="#000000aa" />
             <div style={{backgroundImage: `url(${bg02})`}} className={`bg-fit ${styles.desertBg}`}>
                 <Point data={travelNingxiaData.movie} size01={25} size02={50} size03={25} />
                 <Point data={travelNingxiaData.yellowRiver} size01={50} size02={25} size03={25} />
             </div>
-            <BlackPoint data={travelNingxiaData.mountain} />
-            <Footer data={travelNingxiaData.introduce} />
+            <BlackPoint data={travelNingxiaData.mountain} bgColor="#000000aa" aosCloseAnim={true} />
+            <Footer txt={`華夏文明 薪火相傳 - ${travelNingxiaData.introduce.title}研學之旅`} bgColor="#333" />
         </div>
     )
 }

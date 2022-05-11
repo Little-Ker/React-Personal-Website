@@ -3,19 +3,10 @@ import styles from './goalView.module.sass'
 import '../../style/main.sass'
 
 import GoalPhoto from '../../component/goal/GoalPhoto'
+import BgCircle from "../../component/bgCircle/BgCircle"
 
 import AOS from 'aos'
 import "aos/dist/aos.css"
-
-function BgCircle() {
-    return (
-      <div className={styles.bgCircle}>
-          <div className={styles.circleY}></div>
-          <div className={styles.circleP}></div>
-          <div className={styles.circleO}></div>
-      </div>
-    )
-}
 
 function GoalView() {
     useEffect(() => {
@@ -39,5 +30,3 @@ function GoalView() {
 }
 
 export default GoalView
-
-
