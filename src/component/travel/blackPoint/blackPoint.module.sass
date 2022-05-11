@@ -5,8 +5,19 @@
     position: relative
     height: 400px
     display: flex
+    +variable.mobile
+        margin-top: 40px !important
+        flex-wrap: wrap
+        height: auto
     .item
         width: 50%
+        height: 100%
+        +variable.mobile
+            height: 220px
+            &:nth-child(3)
+                width: 100%
+        +variable.s_mobile
+            height: 180px
         .blackHide
             width: 100%
             height: 100%
@@ -16,5 +27,7 @@
             letter-spacing: 2px
             +variable.set-flex(center, center)
             transition: .3s all
+            +variable.mobile
+                font-size: 16px
         &:hover .blackHide
             opacity: 0

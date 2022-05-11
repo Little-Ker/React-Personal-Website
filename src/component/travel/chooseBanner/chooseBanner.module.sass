@@ -10,6 +10,9 @@
         height: 100%
         width: 100%
         +variable.set-flex(flex-start, flex-end)
+        +variable.mobile
+            justify-content: flex-end
+            padding-right: 15px
         .btn
             cursor: pointer
             +main.bg-fit()
@@ -20,6 +23,9 @@
             transition: .3s all
             position: relative
             opacity: .5
+            +variable.mobile
+                width: 80px
+                height: 50px
             &:hover
                 opacity: 1
                 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px

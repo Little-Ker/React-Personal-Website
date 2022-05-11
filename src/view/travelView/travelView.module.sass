@@ -12,6 +12,8 @@
     .travelList
         display: flex
         height: 100%
+        +variable.mobile
+            flex-direction: column
         .point
             width: 25%
             height: 100%
@@ -20,6 +22,9 @@
             position: relative
             cursor: pointer
             overflow: hidden
+            +variable.mobile
+                width: 100%
+                height: 25%
             img
                 transition: .3s all
             .blackHide
@@ -31,6 +36,8 @@
                 transition: .3s all
                 display: flex
                 justify-content: center
+                +variable.mobile
+                    align-items: center
                 .title
                     font-weight: 700
                     color: #fff
@@ -40,6 +47,12 @@
                     margin-top: 40%
                     text-shadow: 0.1em 0.1em 0.2em black
                     writing-mode: vertical-lr
+                    +variable.mobile
+                        margin-top: 0
+                        height: 40px
+                        font-size: 22px
+                        writing-mode: horizontal-tb
+                        letter-spacing: 5px
                 .txtBox
                     position: absolute
                     bottom: 0
@@ -51,6 +64,8 @@
                     text-shadow: 0.1em 0.1em 0.2em black
                     font-family: 'Roboto Slab', serif
                     letter-spacing: 2px
+                    +variable.mobile
+                        display: none
                     .date
                         position: relative
                         &::before
@@ -68,14 +83,20 @@
                 +variable.set-flex(center, center)
                 opacity: 0
                 transition: .3s all
+                +variable.mobile
+                    +main.circle-center(#5C5959, 70px)
                 &::before
                     content: ''
                     +main.circle-center(#9685758e, 120px)
                     box-shadow: 0px 0px 40px 40px rgb(0 0 0 / 30%)
+                    +variable.mobile
+                        +main.circle-center(#9685758e, 90px)
                 .iconSize
                     font-size: 50px
                     color: #000000d3
                     z-index: 1
+                    +variable.mobile
+                        font-size: 40px
             &:hover
                 z-index: 1
                 box-shadow: 0px 0px 40px 40px rgb(0 0 0 / 30%)
@@ -87,11 +108,10 @@
                     opacity: 1
                     animation: scaleAnim 0.6s
 
-
 @keyframes scaleAnim 
     20%
         transform: scale(1)
     50%
         transform: scale(1.12)
     100%
-        transform: scale(1)             
+        transform: scale(1) 

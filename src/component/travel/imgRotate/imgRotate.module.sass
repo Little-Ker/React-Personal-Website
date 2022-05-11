@@ -1,3 +1,4 @@
+@use '../../../style/variable' as variable
 @use '../../../style/main' as main
     
 .flip
@@ -6,6 +7,9 @@
     position: relative
     width: 220px
     height: 220px
+    +variable.mobile
+        width: 160px
+        height: 160px
     &:hover
         transform: rotateY(180deg)
     .imgCircle

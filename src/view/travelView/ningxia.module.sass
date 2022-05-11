@@ -2,9 +2,7 @@
 @use '../../style/main' as main
     
 .ningxia
-    width: calc(100% - 80px)
-    margin-left: 80px
-    font-family: 'Poppins', sans-serif
+    +main.bg
     font-weight: 700
     letter-spacing: 1px
     .banner
@@ -21,11 +19,22 @@
             top: 30%
             letter-spacing: 3px
             line-height: 2.5
+            +variable.mobile
+                font-size: 40px
+                letter-spacing: 1px
+                left: 3%
+                top: 25%
+                line-height: 2.5
+            +variable.s_mobile
+                font-size: 32px
+                top: 30%
             span
                 background-color: #fff
                 padding: 10px 30px
                 color: #333
                 margin-top: 20px
+                +variable.s_mobile
+                    padding: 5px 10px
         .bannerImg
             +main.bg-fit
     .introduce
@@ -33,13 +42,23 @@
         margin-top: 150px
         margin-bottom: 150px
         position: relative
+        +variable.mobile
+            flex-direction: column
+            margin-top: 70px
+            margin-bottom: 70px
         .paper
             position: absolute
             width: 100%
             top: -120px
+            +variable.mobile
+                top: -11%
+            +variable.s_mobile
+                top: -9%
         .introduceImg
             width: 50%
             margin-left: 40px
+            +variable.mobile
+                margin-left: 0
         .introduceTxt
             position: relative
             width: 50%
@@ -48,14 +67,28 @@
             line-height: 2.4
             font-size: 20px
             color: #46423b
+            +variable.mobile
+                line-height: 2.4
+                font-size: 16px
+                padding: 5px
+                width: 100%
+                left: 0
+                margin-top: 40px
+            +variable.s_mobile
+                margin-top: 20px
     .desertBg
         padding: 80px 0
         position: relative
         background-attachment: fixed
+        +variable.mobile
+            padding-bottom: 0
     .point
         margin-top: 80px
         margin-bottom: 80px
         font-size: 20px
+        +variable.mobile
+            margin-top: 0
+            font-size: 18px
         p
             text-align: left
             margin-bottom: 15px
@@ -66,9 +99,38 @@
             box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px
         .list
             +variable.set-flex(space-between, flex-end)
+            +variable.mobile
+                flex-wrap: wrap
             .item
-                margin-right: 25px
+                +variable.mobile
+                    width: calc((100% - 15px) / 2) !important
+                +variable.s_mobile
+                    width: 100% !important
+                &:nth-child(2)
+                    margin: 0 25px
+                    +variable.mobile
+                        margin: 0 0 0 15px
+                    +variable.s_mobile
+                        margin: 0
                 &:last-child
-                    margin-right: 0
+                    +variable.mobile
+                        width: 100% !important
                 img
                     height: 350px
+                    +variable.mobile
+                        height: 200px
+        .yellowRiverPoint
+            .item
+                &:first-child
+                    +variable.mobile
+                        width: 100% !important
+                &:nth-child(2)
+                    +variable.mobile
+                        margin: 0 15px 0 0
+                    +variable.s_mobile
+                        margin: 0
+                &:last-child
+                    +variable.mobile
+                        width: calc((100% - 15px) / 2) !important
+                    +variable.s_mobile
+                        width: 100% !important

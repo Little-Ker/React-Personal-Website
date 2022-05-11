@@ -5,11 +5,19 @@
     margin-top: 120px !important
     +variable.set-flex(space-between, center)
     height: 600px
+    z-index: 1
+    position: relative
+    +variable.mobile
+        flex-direction: column
+        height: 490px
     .photoList
         width: 50%
         position: relative
         top: -50%
         left: -50px
+        +variable.mobile
+            width: 100%
+            top: -20%
         .photoBg
             position: absolute
             background-color: #fff
@@ -22,14 +30,49 @@
                 width: 280px
                 height: 280px
                 transition: .3s all
+                +variable.mobile
+                    width: 220px
+                    height: 220px
+                +variable.s_mobile
+                    width: 160px
+                    height: 160px
             &.active, &:hover
                 -webkit-filter: grayscale(0)
+        .photo00
+            left: 265px
+            top: 290px
+            transform: rotate(24deg)
+            +variable.mobile
+                left: 60%
+                top: 240px
+                transform: rotate(20deg)
+            +variable.s_mobile
+                left: 65%
+        .photo01
+            left: 5px
+            top: 120px
+            transform: rotate(-18deg)
+            +variable.mobile
+                left: 10%
+                top: 120px
+        .photo02
+            left: 270px
+            top: -50px
+            transform: rotate(5deg)
+            +variable.mobile
+                left: 50%
+                top: 0%
+                transform: rotate(5deg)
+            +variable.s_mobile
+                top: 25px
         .photoTxt
             text-align: right
             padding: 5px 0
             font-size: 16px
             font-weight: 700
             letter-spacing: 2px
+            +variable.mobile
+                font-size: 14px
     .txt
         width: 50%
         padding: 40px
@@ -39,3 +82,17 @@
         font-weight: 700
         color: #343e3f
         text-shadow: rgb(255, 255, 255) -10px 5px 15px
+        +variable.mobile
+            width: 100%
+            padding: 0
+            font-size: 16px
+            line-height: 2
+            margin-left: 0
+            position: relative
+            top: 30px
+        +variable.s_mobile
+            top: 0
+        h2
+            font-size: 24px
+            +variable.mobile
+                font-size: 20px

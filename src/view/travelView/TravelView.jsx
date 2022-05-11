@@ -23,6 +23,11 @@ function TravelView() {
     }, [dispatch])
 
     function fadePos(index) {
+        const pageWidth  = document.documentElement.scrollWidth
+        if (pageWidth <= 576) {
+            if(index % 2 === 1) return "fade-left"
+            return "fade-right"
+        }
         if(index % 2 === 1) return "fade-up"
         return "fade-down"
     }
@@ -35,9 +40,9 @@ function TravelView() {
                     <Link data-aos={fadePos(index)} data-aos-duration="1200" key={index} to={item.to} className={styles.point}>
                         <img className="img-fit" alt={item.title} src={`${process.env.REACT_APP_BASE_URL}${item.imgUrl}`}></img>
                         <div className={styles.blackHide}>
-                            <div data-aos="fade-up" data-aos-delay="1200" data-aos-duration="800" className={styles.title}>{item.title}</div>
+                            <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="1200" data-aos-duration="800" className={styles.title}>{item.title}</div>
                             <div className={styles.txtBox}>
-                                <p data-aos="fade-down" data-aos-delay="1200" data-aos-duration="800" className={styles.date}>
+                                <p data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-delay="1200" data-aos-duration="800" className={styles.date}>
                                     {item.startDate}
                                     <br></br>
                                     {item.overDate}

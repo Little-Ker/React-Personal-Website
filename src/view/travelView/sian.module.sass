@@ -9,12 +9,17 @@
         width: 200px
         right: 200px
         top: 130px
+        +variable.mobile
+            width: 120px
+            right: 30px
     .tree, .tree2
         position: absolute
         width: 550px
         right: -70px
         top: 250px
         opacity: .6
+        +variable.mobile
+            width: 250px
         img
             width: 100%
     .tree2
@@ -22,6 +27,9 @@
         top: 280px
         width: 620px
         transform: rotate(5deg)
+        +variable.mobile
+            width: 220px
+            top: 280px
     .content
         width: calc(100% - 360px)
         +main.bg-fit()
@@ -33,19 +41,34 @@
             position: relative
             font-family: 'f01'
             padding-bottom: 80px
+            +variable.mobile
+                font-size: 34px
+                padding-bottom: 0
             .txt01
                 margin: 80px 0
+                +variable.mobile
+                    margin: 60px
             .txt02, .txt03
                 font-size: 64px
+                +variable.mobile
+                    font-size: 50px
+            .txt03
+                +variable.mobile
+                    margin-bottom: 100px
     .point
         margin-top: 180px
         display: flex
+        +variable.mobile
+            margin-top: 100px
+            flex-direction: column
         .txtContent
             align-self: center
             width: 60%
             padding-right: calc((100% - 1280px) / 2)
             line-height: 2
             font-size: 18px
+            +variable.mobile
+                width: 100%
             &.rightTxt
                 padding-right: 0
                 padding-left: calc((100% - 1280px) / 2)
@@ -53,20 +76,42 @@
                 font-size: 26px
                 margin-bottom: 5px
                 color: #aa885e
+                +variable.mobile
+                    font-size: 20px
+                    margin: 10px 0 5px 0
             .txt
                 margin-top: 10px
+                +variable.mobile
+                    margin-top: 5px
+                    font-size: 14px
+                    padding: 5px
+                    width: 100%
         .bannerPos
             height: 400px
             width: 100%
             margin-right: 60px
+            +variable.mobile
+                height: 250px
+                margin-right: 0
         .bannerRightPos
             margin-left: 60px
             margin-right: 0
+            +variable.mobile
+                margin-left: 0
+    .rightPoint
+        +variable.mobile
+            flex-direction: column-reverse
+            margin-top: 50px
     .pointList
         +variable.set-flex(space-between, center)
         padding: 100px 0
+        +variable.mobile
+            flex-direction: column
+            padding: 0 0 50px 0
         .item
             position: relative
+            +variable.mobile
+                margin-top: 40px
             .imgTxt
                 font-size: 18px
                 letter-spacing: 1px
@@ -74,6 +119,9 @@
                 position: relative
                 z-index: 2
                 text-shadow: rgb(255, 255, 255) -10px 5px 15px
+                +variable.mobile
+                    font-size: 16px
+                    margin-top: 20px
                 &::after, &::before
                     content: ''
                     width: 100%

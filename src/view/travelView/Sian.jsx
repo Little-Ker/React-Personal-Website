@@ -78,9 +78,9 @@ function PointList(props) {
         <div style={{backgroundImage: `url(${bg})`}} className="bg-fit">
             <div className={`container960 ${styles.pointList}`}>
                 {data.map((item ,index) => (
-                    <div data-aos="zoom-in-left" data-aos-delay={index * 300} key={index} className={styles.item}>
+                    <div id={`circleId${index}`} data-aos="zoom-in-left" data-aos-delay={index * 300} key={index} className={styles.item}>
                         <ImgRotate item={item} />
-                        <p data-aos="flip-right" data-aos-duration="800" data-aos-delay={index * 300 + 800} className={styles.imgTxt}>{item.title}</p>
+                        <p data-aos="flip-right" data-aos-anchor={`circleId${index}`} data-aos-duration="800" data-aos-delay={index * 300 + 800} className={styles.imgTxt}>{item.title}</p>
                     </div>
                 ))}
             </div>

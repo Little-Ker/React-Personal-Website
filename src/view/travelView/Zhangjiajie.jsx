@@ -30,14 +30,19 @@ function Title() {
     )
 }
 
-function CirclePointBg() {
+function CirclePointBg(props) {
     return (
         <div style={{backgroundImage: `url(${circleBg})`}} className={`bg-fit ${styles.circlePointBg}`}>
             <div data-aos="fade-right" data-aos-duration="3000" data-aos-delay="300" className={styles.cloud}>
                 <img src={cloud2} alt="圖片" />
             </div>
+            <CirclePoint data={props.data} />
         </div>
     )
+}
+
+CirclePointBg.propTypes = {
+    data: PropTypes.array.isRequired
 }
 
 function CirclePoint(props) {
@@ -45,12 +50,12 @@ function CirclePoint(props) {
     return (
         <div className={styles.circlePointList}>
             {data.map((item, index) => (
-                <div data-aos="zoom-in-left" data-aos-delay={index * 300} key={index} className={styles.point}>
+                <div id={`circlePos${index}`} data-aos="zoom-in-left" data-aos-delay={index * 300} key={index} className={styles.point}>
                     <div className={styles.cirlceImg}>
                         <img className="img-fit" src={`${process.env.REACT_APP_BASE_URL}${item.imgUrl}`} alt="" />
                     </div>
-                    <img data-aos="flip-right" data-aos-duration="800" data-aos-delay={index * 300} className={styles.cirlceTxtBg} src={txtBg} alt="" />
-                    <div data-aos="flip-right" data-aos-duration="800" data-aos-delay={index * 300} className={styles.title}>{item.title}</div>
+                    <img data-aos-anchor={`circlePos${index}`} data-aos="flip-right" data-aos-duration="800" data-aos-delay={index * 300} className={styles.cirlceTxtBg} src={txtBg} alt="" />
+                    <div data-aos-anchor={`circlePos${index}`} data-aos="flip-right" data-aos-duration="800" data-aos-delay={index * 300} className={styles.title}>{item.title}</div>
                 </div>
             ))}
         </div>    
@@ -90,8 +95,7 @@ function Zhangjiajie() {
     return (
         <div className={styles.zhangjiajie}>
             <Banner data={travelZhangjiajieData.photo} />
-            <CirclePoint data={travelZhangjiajieData.circleImg} />
-            <CirclePointBg />
+            <CirclePointBg data={travelZhangjiajieData.circleImg} />
             <BlackPoint data={travelZhangjiajieData.blackImg} bgColor="#4e6a808f" marginTopNum={-50} />
             <Footer txt="張家界之旅" bgColor="#222e36" />
         </div>

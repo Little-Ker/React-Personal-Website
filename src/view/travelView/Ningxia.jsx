@@ -22,10 +22,10 @@ const imgSize = (size) => {
 }
 
 function Point(props) {
-    const { data, size01, size02, size03 } = props
+    const { data, size01, size02, size03, className } = props
     return (
         <div className={`container1280 ${styles.point}`}>
-            <div className={styles.list}>
+            <div className={`${styles[className]} ${styles.list}`}>
                 <div data-aos="fade-left" className={styles.item} style={imgSize(size01)}>
                     <p>{data.title01}</p>
                     <img className="img-fit" src={`${process.env.REACT_APP_BASE_URL}${data.imgUrl01}`} alt="" />
@@ -47,7 +47,8 @@ Point.propTypes = {
     data: PropTypes.object.isRequired,
     size01: PropTypes.number.isRequired,
     size02: PropTypes.number.isRequired,
-    size03: PropTypes.number.isRequired
+    size03: PropTypes.number.isRequired,
+    className: PropTypes.string.isRequired
 }
 
 function Introduce(props) {
@@ -55,8 +56,8 @@ function Introduce(props) {
     return (
         <div className={`container1280 ${styles.introduce}`}>
             <img src={paper} className={styles.paper} alt="" />
-            <img data-aos="fade-right" data-aos-anchor-placement="center-center" src={`${process.env.REACT_APP_BASE_URL}${data.imgUrl}`} alt="圖片" className={`img-fit ${styles.introduceImg}`} />
-            <p data-aos="fade-left" data-aos-anchor-placement="center-center" className={styles.introduceTxt}>{data.content}</p>
+            <img data-aos="fade-right" src={`${process.env.REACT_APP_BASE_URL}${data.imgUrl}`} alt="圖片" className={`img-fit ${styles.introduceImg}`} />
+            <p data-aos="fade-left" className={styles.introduceTxt}>{data.content}</p>
         </div>  
     )
 }
@@ -101,8 +102,8 @@ function Ningxia() {
             <Introduce data={travelNingxiaData.introduce} />
             <BlackPoint data={travelNingxiaData.camel} bgColor="#000000aa" />
             <div style={{backgroundImage: `url(${bg02})`}} className={`bg-fit ${styles.desertBg}`}>
-                <Point data={travelNingxiaData.movie} size01={25} size02={50} size03={25} />
-                <Point data={travelNingxiaData.yellowRiver} size01={50} size02={25} size03={25} />
+                <Point data={travelNingxiaData.movie} size01={25} size02={50} size03={25} className="moviePoint" />
+                <Point data={travelNingxiaData.yellowRiver} size01={50} size02={25} size03={25} className="yellowRiverPoint" />
             </div>
             <BlackPoint data={travelNingxiaData.mountain} bgColor="#000000aa" aosCloseAnim={true} />
             <Footer txt={`華夏文明 薪火相傳 - ${travelNingxiaData.introduce.title}研學之旅`} bgColor="#333" />
