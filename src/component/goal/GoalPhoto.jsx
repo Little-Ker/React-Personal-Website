@@ -47,7 +47,7 @@ function GoalPhoto() {
 
     return (
         <div className={styles.goalPhoto}>
-            <div data-aos="zoom-out-down" data-aos-delay="1200" className={styles.photoList}>
+            <div id="goalPhotoAnim" data-aos="zoom-out-down" data-aos-delay="1200" className={styles.photoList}>
                 {goalList.map((item, index) => (
                     <div key={index} className={clsx(styles.photo, styles[`photo0${index + 1}`], (selected >= index && styles[`showPhoto0${index + 1}`]))}>
                         <img className={`img-fit ${styles.goalImg}`} src={item.imgUrl} alt="" />
@@ -62,7 +62,7 @@ function GoalPhoto() {
                     </div>
                 ))}
             </div>
-            <div className={styles.right} data-aos="flip-left" data-aos-delay="2000">
+            <div data-aos-anchor="#goalPhotoAnim" className={styles.right} data-aos="flip-left" data-aos-delay="2000">
                 <div onClick={() => {nextFn()}} className={clsx(styles.rightBtn, selected === 2 && styles.hideRightBtn)}>Next</div>
             </div>
         </div>

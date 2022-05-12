@@ -16,12 +16,17 @@
         display: flex
         justify-content: center
         align-items: center
+        +variable.mobile
+            justify-content: space-between
         .title
             align-self: flex-start
             margin-bottom: 60px
             text-align: left
             +variable.mobile
-                margin-bottom: 15%
+                // margin-bottom: 15%
+                margin: 20px 0
+                width: 100%
+                text-align: center
             h1
                 color: variable.$main-pink
                 font-size: 36px
