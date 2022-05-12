@@ -23,7 +23,7 @@ function Introduce() {
 
     return (
         <div className={styles.root}>
-            <div className={styles.title}>
+            <div data-aos="fade-right" data-aos-duration="1000" className={styles.title}>
                 <h1>關於我</h1>
                 <p>About Me</p>
             </div>

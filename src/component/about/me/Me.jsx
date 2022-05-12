@@ -9,11 +9,11 @@ import vivi from '../../../assets/image/about/vivi.jpg'
 function Introduce(props) {
   return(
     <div className={styles.person}>
-      <div data-aos="fade-down-left" data-aos-delay="400" className={styles.photo}>
+      <div id="showMeAnim" data-aos="fade-down-left" data-aos-delay="400" className={styles.photo}>
         <img src={vivi} className="img-fit"  alt="" />
       </div>
       <div data-aos="fade-down-left" className={styles.photoFrame}></div>
-      <div data-aos="fade-left" data-aos-delay="1000" className={styles.text}>
+      <div data-aos-anchor="#showMeAnim" data-aos="fade-left" data-aos-delay="1000" className={styles.text}>
           <div className={styles.shadowText}>
             <div className={styles.shadow}>{props.title}</div>
             <div className={styles.text2}>{props.title}</div>
