@@ -25,7 +25,7 @@ function Introduce() {
         <div className={styles.root}>
             <div className={styles.title}>
                 <h1>關於我</h1>
-                <p>About Me </p>
+                <p>About Me</p>
             </div>
             <div className={styles.chooseList}>
                 {data.map((val, index) => (

@@ -109,11 +109,14 @@ ImageItem.propTypes = {
 
 function QuiltedImageList(props) {
   const { data } = props
+  const pageWidth = document.documentElement.scrollWidth
+  const rowHeight = (pageWidth <= 576) ? 60 : 121
+
   return (
     <ImageList
       variant="quilted"
       cols={4}
-      rowHeight={121}
+      rowHeight={rowHeight}
       className={styles.imageList}
     >
       {data.map((item, index) => (

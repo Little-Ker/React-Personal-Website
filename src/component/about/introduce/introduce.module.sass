@@ -4,16 +4,26 @@
     margin-bottom: 120px
     position: relative
     text-align: left
+    +variable.mobile
+        margin-bottom: 60px
     .title
+        +variable.mobile
+            padding: 0 30px
+            margin-bottom: 20px
+            text-align: center
         h1
             color: variable.$main-pink
             font-size: 36px
+            +variable.mobile
+                font-size: 30px
         p
             color: variable.$main-black
             font-size: 20px
             opacity: .9
             margin-left: 3px
             font-family: Verdana,Geneva,sans-serif
+            +variable.mobile
+                font-size: 18px
     .chooseList
         .chooseBox
             margin-top: 30px
@@ -30,6 +40,10 @@
             transition: .3s all
             cursor: pointer
             font-weight: 700
+            +variable.mobile
+                height: 70px
+                padding: 0 30px
+                margin-top: 10px
             &:hover, .active
                 background-color: #ffffffe6
                 box-shadow: rgba(32, 32, 32, 0.2) 0px 2px 8px 0px
@@ -43,12 +57,20 @@
                 position: absolute
                 right: 75px
                 top: 50%
+                +variable.mobile
+                    width: 15px
+                    height: 5px
+                    right: 38px
             &::after
                 transform: rotate(-45deg)
                 right: 65px
+                +variable.mobile
+                    right: 30px
             p
                 font-size: 24px
                 color: variable.$main-black
+                +variable.mobile
+                    font-size: 20px
         .active
             background-color: #ffffffe6
             box-shadow: rgba(32, 32, 32, 0.2) 0px 2px 8px 0px

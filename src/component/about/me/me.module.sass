@@ -3,24 +3,32 @@
     
 .meBg
     height: 100vh
-    width: calc(100% - 80px)
-    margin-left: 80px
-    display: flex
-    justify-content: center
-    align-items: center
+    +main.bg
+    +variable.set-flex(center, center)
     position: relative
-    overflow: hidden
     background-color: #ffff0000
     font-family: Verdana,Geneva,sans-serif
+    +variable.mobile
+        height: auto
+        padding: 70px 15px 60px 15px
     .person
         position: relative
         display: flex
+        +variable.mobile
+            flex-direction: column
+            align-items: center
         .photo
             width: 360px
             height: 420px
             background-color: #ccc
             position: relative
             z-index: 1
+            +variable.mobile
+                width: 80%
+                height: 390px
+            +variable.s_mobile
+                width: 90%
+                height: 390px
             &::before
                 content: ''
                 width: 100%
@@ -38,11 +46,20 @@
             top: 15px
             left: -15px
             background: repeating-linear-gradient(-45deg, variable.$pink-bg 0px, variable.$pink-bg 3px, transparent 3px, transparent 10px)
+            +variable.mobile
+                width: 80%
+                height: 390px
+                left: 5%
+            +variable.s_mobile
+                width: 90%
+                left: 0
         .text
             z-index: 1
             text-align: left
             margin-left: 100px
-            font-size: 48px
+            +variable.mobile
+                margin-left: 0
+                margin-top: 35px
             .shadowText
                 font-size: 102px
                 font-weight: bold
@@ -50,6 +67,8 @@
                 margin-left: -5px
                 -webkit-text-stroke: 2px variable.$main-pink
                 color: variable.$main-bg
+                +variable.mobile
+                    font-size: 92px
                 .shadow
                     position: absolute
                     top: 10px
@@ -58,10 +77,16 @@
                     color: #999
                     -webkit-text-fill-color: transparent
                     -webkit-background-clip: text
+                    +variable.mobile
+                        right: 0
+                        left: auto
                 .text2
                     position: absolute
                     top: 5px
                     left: 25px
+                    +variable.mobile
+                        right: 5px
+                        left: auto
             .introduce
                 margin-top: 180px
                 font-family: 'Poppins', sans-serif
@@ -71,6 +96,11 @@
                 line-height: 1.8
                 width: 430px
                 letter-spacing: 1px
+                +variable.mobile
+                    font-size: 18px
+                    width: auto
+                    margin-top: 120px
+                    margin-bottom: 40px
                 .txt
                     margin: 10px 0 0 17px
                     color: variable.$main-black

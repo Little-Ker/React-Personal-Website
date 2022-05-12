@@ -2,11 +2,15 @@
     
 .interest
     margin: 60px 40px
+    +variable.mobile
+        margin: 0
     .list
         display: flex
         justify-content: center
         position: relative
         flex-wrap: wrap
+        +variable.mobile
+            padding: 5px 0
         .item
             flex-direction: column
             +variable.set-flex(center, center)
@@ -16,6 +20,10 @@
             margin: 15px 15px
             border-radius: 10px
             transition: .3s all
+            +variable.mobile
+                width: 100%
+                padding: 25px 10px 20px 10px
+                margin: 5px 15px
             p
                 font-size: 17px
                 letter-spacing: 1px
@@ -23,6 +31,8 @@
                 font-weight: 700
                 opacity: .9
                 transition: .3s all
+                +variable.mobile
+                    font-size: 15px
             .icon
                 transition: .3s all
                 position: relative
@@ -36,8 +46,13 @@
                 margin-bottom: 15px
                 box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.2) 0px 7px 13px -3px, rgba(0, 0, 0, 0.1) 0px -3px 0px inset
                 +variable.set-flex(center, center)
+                +variable.mobile
+                    width: 60px
+                    height: 60px
                 .iconSize
                     font-size: 42px
+                    +variable.mobile
+                        font-size: 32px 
                 &::before
                     content: ''
                     width: 120%
@@ -54,6 +69,9 @@
                 margin: 10px 0 5px 0
                 color: variable.$main-black
                 transition: .3s all
+                +variable.mobile
+                    font-size: 18px
+                    margin: 0
             &:hover
                 background-color:  variable.$brown-color
                 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
