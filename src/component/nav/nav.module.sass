@@ -1,6 +1,60 @@
 @use '../../style/variable' as variable
 
 .nav
+    .navBtn
+        position: fixed
+        z-index: 100
+        left: 0
+        top: 0
+        width: 80px
+        +variable.set-flex(center, center)
+        margin: 20px -3px
+        padding: 20px
+        display: none
+        .line
+            width: 20px
+            height: 3px
+            border-radius: 10px
+            background-color: variable.$main-black-color
+            position: relative
+            transition: .3s all
+            &::before, &::after
+                content: ''
+                width: 125%
+                height: 3px
+                background-color: variable.$main-black-color
+                position: absolute
+                left: 0
+                top: -10px
+                border-radius: 10px
+                transition: .3s all
+            &::after
+                top: 10px
+        &.active
+            .line
+                background-color: #ffffff00
+                &::before
+                    transform: rotate(45deg)
+                    top: 0
+                &::after
+                    transform: rotate(-45deg)
+                    top: 0
+        +variable.mobile
+            display: flex
+    .blackHide
+        width: 100%
+        height: 100vh
+        background-color: #0000009f
+        position: fixed
+        z-index: 98
+        transition: .5s all
+        opacity: 0
+        visibility: hidden
+        &.active
+            overflow: hidden
+            opacity: 1
+            visibility: visible
+.navContent
     position: fixed
     top: 0
     left: 0
@@ -12,17 +66,23 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
     font-family: "Poppins", Arial, sans-serif
     font-weight: 700
-    z-index: 100
+    z-index: 99
     display: flex
     flex-direction: column
     justify-content: space-between
+    transition: .5s all
     +variable.mobile
-        display: none
+        justify-content: flex-end
+        left: -100%
+    &.active
+        left: 0
     .avatar
         display: flex
         flex-direction: column
         align-items: center
         margin-top: 15px
+        +variable.mobile
+            display: none
         // .photo
         //     width: 40px
         //     height: 40px
