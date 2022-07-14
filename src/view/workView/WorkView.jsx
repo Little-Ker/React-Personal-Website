@@ -24,7 +24,7 @@ const workList = [{
 },{
     company: "弈樂科技",
     icon: <WebOutlinedIcon className={styles.iconSize} />,
-    txt: [ "後臺前端工程師", "React 框架", "個人介紹網站" ]
+    txt: [ "後臺前端工程師", "React 框架、個人介紹網站", "客服查詢頁面" ]
 }]
 
 function Work() {
