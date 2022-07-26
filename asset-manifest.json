@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/React-Personal-Website/static/css/main.0bd28a3f.css",
-    "main.js": "/React-Personal-Website/static/js/main.69df75b1.js",
+    "main.css": "/React-Personal-Website/static/css/main.b925c34c.css",
+    "main.js": "/React-Personal-Website/static/js/main.2a9b3462.js",
     "static/js/787.9d17a612.chunk.js": "/React-Personal-Website/static/js/787.9d17a612.chunk.js",
     "static/media/wt024.ttf": "/React-Personal-Website/static/media/wt024.e5f9cd148e12ef060183.ttf",
     "static/media/KouzanBrushFontSousyo.ttf": "/React-Personal-Website/static/media/KouzanBrushFontSousyo.8ef0df3ba42c88aa3eaa.ttf",
@@ -24,12 +24,12 @@
     "static/media/goal02.jpg": "/React-Personal-Website/static/media/goal02.28fd11f8d150f9924afc.jpg",
     "static/media/tree.png": "/React-Personal-Website/static/media/tree.3658e7bf59d2f75b82da.png",
     "index.html": "/React-Personal-Website/index.html",
-    "main.0bd28a3f.css.map": "/React-Personal-Website/static/css/main.0bd28a3f.css.map",
-    "main.69df75b1.js.map": "/React-Personal-Website/static/js/main.69df75b1.js.map",
+    "main.b925c34c.css.map": "/React-Personal-Website/static/css/main.b925c34c.css.map",
+    "main.2a9b3462.js.map": "/React-Personal-Website/static/js/main.2a9b3462.js.map",
     "787.9d17a612.chunk.js.map": "/React-Personal-Website/static/js/787.9d17a612.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0bd28a3f.css",
-    "static/js/main.69df75b1.js"
+    "static/css/main.b925c34c.css",
+    "static/js/main.2a9b3462.js"
   ]
 }
