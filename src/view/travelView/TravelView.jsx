@@ -5,6 +5,13 @@ import {fetchTravelData} from '../../redux/travelSlice'
 import styles from './travelView.module.sass'
 import AddIcon from '@mui/icons-material/Add'
 
+// "banner": [
+//     {"title": "亞洲大學", "to": "/travel/asia", "imgUrl": "/img/travel/banner01.jpg", "startDate": "2015 - 09", "overDate": "2019 - 06"},
+//     {"title": "西安研學之旅", "to": "/travel/sian", "imgUrl": "/img/travel/banner02.jpg", "startDate": "2018 - 04 - 30", "overDate": "2018 - 05 - 04"},
+//     {"title": "寧夏研學之旅", "to": "/travel/ningxia", "imgUrl": "/img/travel/banner03.jpg", "startDate": "2019 - 05 - 11", "overDate": "2019 - 05 - 18"},
+//     {"title": "張家界", "to": "/travel/zhangjiajie", "imgUrl": "/img/travel/banner04.jpg", "startDate": "2019 - 07 - 21", "overDate": "2019 - 07 - 21"}
+// ],
+
 function ShowFontFamily() {
     return (
         <div className={styles.showFontFamily}>
